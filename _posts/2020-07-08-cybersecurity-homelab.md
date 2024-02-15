@@ -25,15 +25,24 @@ Virtualization can be heavy on various hardware components. Luckily, I have a go
 - **Storage:** 1TB
 
 
+<br>
+
 ### Lab Components
+---
 
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
+<br>
 
+<div align="center">
 
+| Machine       | Description           | 
+| ------------- | ------------- |
+| Pfsense    | Firewall / Routing Solution | 
+| Security Onion    | IDS / IPS Solution for the environment.      |
+| Metasploitable2 | A deliberately vulnerable server.     |
+
+</div>
+
+<br>
 
 ### Steps
 ---

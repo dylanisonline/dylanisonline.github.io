@@ -38,10 +38,9 @@ li { margin: 0.4em 0; }
 }
 
 table, th, td {
-  width: 100%;
-  border: thin solid black;
+  border: thin dashed white;
   border-collapse: collapse;
-  padding: 0.4em;
+  padding: 0.8em;
 }
 
 div.highlighter-rouge pre code, pre code.highlighter-rouge {
