@@ -3,6 +3,10 @@ layout: post
 title: About
 ---
 
-This is an example page!
+# Hey There!
 
-Actually, it has the same layout of a post...
+
+#### Work Experiences
+----
+
+- Network Engineering Intern

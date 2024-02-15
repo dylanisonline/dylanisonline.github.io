@@ -1,5 +1,5 @@
 navbar_entries:
-  - title: about
+  - title: About
     url: about
 
   - title: blog
@@ -9,8 +9,8 @@ navbar_entries:
     url: https://www.abhinav.co
 
 project_entries:
-  - title: Project 1
-    url: overview-post
+  - title: Active Directory
+    url: active-directory
     desc: This is an example project, configured in _data/home.yml
 
   - title: Project 2
