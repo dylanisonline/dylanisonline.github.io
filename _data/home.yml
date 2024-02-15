@@ -20,6 +20,7 @@ project_entries:
   - title: Azure Sentinel
     url: overview-post
     desc: You can control visibility from _config.yml file
+    highlight: Azure
 
   - title: AWS Something
     url: overview-post
