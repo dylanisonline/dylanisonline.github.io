@@ -3,10 +3,25 @@ layout: post
 title: About
 ---
 
-# Hey There!
+## Get to know me a little bit better :)
 
 
-#### Work Experiences
-----
+### The Basics
+---
+Born and Raised in Houston, Texas
 
-- Network Engineering Intern
+Studied at University of Rochester
+
+
+### Education
+---
+University of Rochester
+
+<br>
+
+### Interests
+---
+- Graphic Design
+- Video Games
+
+
