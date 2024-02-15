@@ -15,7 +15,7 @@ project_entries:
     desc: A project that delves into the complexity of Active Directory.
 
   - title: Cybersecurity Lab
-    url: overview-post
+    url: cybersecurity-homelab
     desc: A virutalized lab that mimics a SOC in the comfort of your own home.
 
   - title: Azure Sentinel

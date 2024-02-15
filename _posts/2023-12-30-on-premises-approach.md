@@ -4,16 +4,18 @@ author: Dylan Phan
 tags: [virtualization, VMware]
 ---
 
+
+###
+
+
+
 ### House Keeping
+---
 
-
-1.  Created a separate folder to store system ISOs
-2.  Created a separate folder to store virtual machine instances
-3.  File Hierarchy:
+#### 1. Created a seperate folder to store system ISOs
 
 
 ```
-
 Active Directory Lab
 │
 ├───firewall
@@ -35,11 +37,9 @@ Active Directory Lab
          └───WIN2.vmx
 	├───linux1
          └───LIN1.vmx
-
 ```
 
-
-
+#### 4. VMware File System:
 
 <img src="https://i.imgur.com/s697hCP.png">
 
