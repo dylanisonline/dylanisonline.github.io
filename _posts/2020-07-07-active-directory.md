@@ -1,7 +1,7 @@
 ---
 layout: post
 author: Dylan Phan
-tags: [virtualization, VMware]
+tags: [Active Directory, VMware]
 ---
 
 <br>
@@ -25,7 +25,7 @@ Active Directory is an access control mechanism that was developed by Microsoft.
 
 ## Choose your own Adventure
 
-Active Directory 
+[On Premises Approach](on-premises-approach)
 
 
 <br>

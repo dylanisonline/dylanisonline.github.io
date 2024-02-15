@@ -22,15 +22,16 @@ ul.horizontal-list {
   border: 1px var(--text) solid;
   width: 11em;
   height: auto;
-  text-align: center;
+  text-align: left;
   font-size: 1em;
   align-items: center;
-  background-color: var(--bg-secondary);
+  background-color: var(--bg-primary);
   margin-bottom: 0.8em;
-  border-radius: 0.5em;
+  border-radius: 0.1em;
 
   .header {
     color: var(--links);
+    font-weight: bold;
   }
 
   .body {

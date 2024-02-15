@@ -1,25 +1,26 @@
 navbar_entries:
+
+  - title: DYLANISONLINE
+
   - title: About
     url: about
 
-  - title: blog
-    url: blog
-
-  - title: website
+  - title: Resume
     url: https://www.abhinav.co
 
 project_entries:
+
   - title: Active Directory Lab
     url: active-directory
-    desc: This is an example project, configured in _data/home.yml
+    desc: A project that delves into the complexity of Active Directory.
 
   - title: Cybersecurity Lab
     url: overview-post
-    desc: Projects are shown in card layout
+    desc: A virutalized lab that mimics a SOC in the comfort of your own home.
 
   - title: Azure Sentinel
     url: overview-post
-    desc: You can control visibility from _config.yml file
+    desc: A honeypot deployed on the cloud to see where attackers are launching their attacks.
     highlight: Azure
 
   - title: AWS Something
@@ -46,17 +47,12 @@ old_project_entries:
     desc: The better people know you, the better they collaborate
 
 footer_entries:
-  - title: abhinav's homepage
-    url: https://www.abhinav.co
 
-  - title: twitter
+  - title: LinkedIn
     url: https://twitter.com/abhinav
 
-  - title: github
+  - title: Github
     url: https://github.com/abhinavs
-
-  - title: feed
-    url: feed.xml
 
 misc_entries:
   - title: this is an example vertical list
