@@ -13,16 +13,17 @@ Born and Raised in Houston, Texas
 
 Studied at University of Rochester
 
+<br>
 
 ### Education
 ---
 
-#### University of Rochester
-- B.A. Digital Media Studies (Dec. 2023)
-- GPA: 3.7
+#### University of Rochester (Fall '23) 🐝
+- B.A. Digital Media Studies (GPA: 3.7)
+- Achievements: Dean's List
+- Relevant Coursework: Object Oriented Programming, Advanced Web Development, Python Analytics, Data Science, Data Mining
 
 <br>
-
 
 
 ### Organizations
