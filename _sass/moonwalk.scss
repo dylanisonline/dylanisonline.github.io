@@ -38,9 +38,10 @@ li { margin: 0.4em 0; }
 }
 
 table, th, td {
-  border: thin dashed white;
+  border: thin solid white;
   border-collapse: collapse;
-  padding: 0.8em;
+  padding: 1em;
+  text-align: left;
 }
 
 div.highlighter-rouge pre code, pre code.highlighter-rouge {

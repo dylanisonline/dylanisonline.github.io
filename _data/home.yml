@@ -25,19 +25,18 @@ project_entries:
 
 
 old_project_entries:
-  - title: Soopr
+  - title: Lights, Camera, Prediction
     url: language-tests
-    desc: Delight your readers - add beautiful share and like buttons easily to your websites 
-    highlight: NEW
+    desc: A project using Python to implement machine learning algorithms to predict the success of a movie.
 
 
 footer_entries:
 
   - title: LinkedIn
-    url: https://twitter.com/abhinav
+    url: https://www.linkedin.com/in/dylan-phan-cyber/
 
   - title: Github
-    url: https://github.com/abhinavs
+    url: https://github.com/dylanisonline
 
 misc_entries:
   - title: this is an example vertical list

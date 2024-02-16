@@ -6,12 +6,9 @@ tags: [🚧, Active Directory, VMware]
 
 <br>
 
-This series of posts will go over what Active Directory is and how to configure it based on certain conditions.
+This series of posts will go over what Active Directory is and how to configure it based on certain conditions. (STILL IN PROGRESS)
 
 <br>
-
-
-
 
 ### What is Active Directory?
 ---
@@ -53,14 +50,36 @@ One of the primary functions of Active Directory is authentication and authoriza
 
 <br>
 
+
+### Importance of Understanding Active Directory
+---
+
+
+<br>
+
+
+
 ### 🧙‍♂️ Choose your own Adventure
 ---
 
-With these different solutions for active directory, it can be 
+<br>
 
-[On Premises Approach](on-premises-approach)
+**On Premises Approach**
 
-[Azure Cloud Approach](code)
+1. [Preparing our environment](on-premises-part-1)
+2. [Configuring Firewall and Routing](on-premises-part-2)
+3. [Pfsense GUI Configuration](on-premises-part-3)
+3. [Creating Domain Controller](on-premises-part-4)
+4. [Creating SQL Server and Conncting to Domain Controller](on-premises-part-5)
+4. [Creating users and connecting to the Domain Controller](on-premises-part-6)
+5. [Implementing SIEM](on-premises-part-7)
+
+<br>
+
+**Azure Approach**
+
+
+
 
 <br>
 
