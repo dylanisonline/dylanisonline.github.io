@@ -5,7 +5,20 @@ tags: [virtualization, VMware]
 ---
 
 
-###
+To implement an on-premises approach of active directory, I used VMware Workstation Pro as a hypervisor solution for this environment.
+
+
+### Environment Components
+---
+<br>
+
+| Machine    | Description |
+| ------     | ------      |
+| Server     | Domain controller that will allows us to                  |
+| Pfsense    | Routing and Firewall Solution                                 |
+| SQL Server | A server that will only certain users will be given access to |
+| Workstation 1 | Windows Workstation |
+| Workstation 2 | Windows Workstation | 
 
 
 
@@ -14,6 +27,7 @@ tags: [virtualization, VMware]
 
 #### 1. Created a seperate folder to store system ISOs
 
+#### 2. Created a seperate folder to store VMs for this lab:
 
 ```
 Active Directory Lab
@@ -43,3 +57,6 @@ Active Directory Lab
 
 <img src="https://i.imgur.com/s697hCP.png">
 
+<br>
+
+## Cre

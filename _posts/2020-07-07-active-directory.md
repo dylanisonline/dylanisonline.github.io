@@ -10,10 +10,17 @@ This series of posts will go over what Active Directory is and how to configure 
 
 <br>
 
+
+
+
 ### What is Active Directory?
 ---
 
-Active Directory (AD) is a robust directory service developed by Microsoft, primarily used in Windows environments to manage and organize network resources efficiently. At its core, Active Directory serves as a centralized database that stores information about objects within a network, such as users, computers, groups, and resources like printers and shared folders.
+<img src="https://miro.medium.com/v2/resize:fit:624/0*u8lSOsKnxFapY0qO.png" width=800px height=500px>
+
+<br>
+
+Active Directory (AD) is a directory service developed by Microsoft, primarily used in Windows environments to manage and organize network resources efficiently. At its core, Active Directory serves as a centralized database that stores information about objects within a network, such as users, computers, groups, and resources like printers and shared folders.
 
 
 One of the primary functions of Active Directory is authentication and authorization. It allows users to log in securely to network resources and determines their level of access based on permissions assigned by administrators. This centralized authentication mechanism enhances security and simplifies user management across the network.
@@ -40,14 +47,16 @@ One of the primary functions of Active Directory is authentication and authoriza
 ### On Premises vs. Cloud
 ---
 
-**On Prem:**
+**🏢 On-Prem:** On-premises Active Directory resides within an organization's physical infrastructure, necessitating hardware procurement, maintenance, and security measures. With complete control and ownership, organizations manage scalability by forecasting future needs and allocating resources accordingly. Security relies on traditional measures such as physical access controls and network security protocols.
 
-**Cloud:**
+**☁️ Cloud:** Cloud-based Active Directory, hosted on virtualized infrastructure provided by a cloud service provider, offers a managed service approach. Eliminating the need for physical hardware, organizations benefit from elastic scalability, rapid resource provisioning, and automated updates. Security measures, including encryption, multi-factor authentication, and compliance certifications, are robustly implemented by the provider. 
 
 <br>
 
-### Choose your own Adventure
+### 🧙‍♂️ Choose your own Adventure
 ---
+
+With these different solutions for active directory, it can be 
 
 [On Premises Approach](on-premises-approach)
 

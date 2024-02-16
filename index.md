@@ -1,8 +1,9 @@
 ---
 layout: home
----
+--- 
 
-<img src="https://cdn.svgator.com/images/2021/10/solar-system-animation.svg" width="100%" height="100%">
+
+<img src="https://i.pinimg.com/originals/d5/43/e4/d543e4d6958a4c64eb45545de3c4ed6f.gif" width="100%" height="100%">
 
 ## 👋 Hey there! 
 
