@@ -14,6 +14,10 @@ In this part of the Active Directory "On-Premises" Lab series, I will go over ho
 ### Network Topology
 ---
 
+
+192.168.1.X:
+
+
 <br>
 
 ### Configuring VMware Virtual Networks

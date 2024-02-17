@@ -5,15 +5,6 @@ title: About
 
 ## Get to know me a little bit better
 
-if you want to cut to the chase: [Resume]()
-
-### The Basics
----
-Born and Raised in Houston, Texas
-
-Studied at University of Rochester
-
-<br>
 
 ### Education
 ---
@@ -40,6 +31,8 @@ Studied at University of Rochester
 #### VSCA - Houston
 - 2019 VVDV Award Recipient
 - Kickstarted the mentorship program in 2021
+
+<br>
 
 ### Interests
 ---

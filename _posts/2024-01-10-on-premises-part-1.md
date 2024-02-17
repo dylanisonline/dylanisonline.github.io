@@ -24,7 +24,11 @@ a virtalized setting to implement this setup. The following machines will be use
 
 ### Hypervisor
 ---
-In this lab, I will be using VMware Workstation Pro to create the Active Directory Environment
+In this lab, I will be using VMware Workstation Pro to create the Active Directory Environment. I've found that it is the 
+easiest hypervisor to implement this setup due to how it manages host devices and virtual networks.
+
+
+[VMware Workstation Pro]()
 
 
 <br>
@@ -39,19 +43,20 @@ In this lab, I will be using VMware Workstation Pro to create the Active Directo
 
 <br>
 
-### Getting Images and File structure
+### Getting Images
 ---
 
 #### 1. Windows Server and Desktop
 
-
+[Desktop](), [Server]()
 
 #### 2. Ubuntu Desktop
 
+[Desktop](), [Server]()
 
 #### 3. Pfsense
 
-
+[Pfsense Community Edition]()
 
 <br>
 
