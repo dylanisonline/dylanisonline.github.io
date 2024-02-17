@@ -28,7 +28,7 @@ In this lab, I will be using VMware Workstation Pro to create the Active Directo
 easiest hypervisor to implement this setup due to how it manages host devices and virtual networks.
 
 
-[VMware Workstation Pro]()
+[VMware Workstation Pro](https://www.vmware.com/products/workstation-pro/workstation-pro-evaluation.html)
 
 
 <br>
@@ -48,17 +48,19 @@ easiest hypervisor to implement this setup due to how it manages host devices an
 
 #### 1. Windows Server and Desktop
 
-[Desktop](), [Server]()
+![Windows Evaluation center](https://i.imgur.com/45MCizL.png)
+
+[Desktop](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-10-enterprise), [Server](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2022)
 
 #### 2. Ubuntu Desktop
 
 ![alt](https://i.imgur.com/9ajMNLD.png)
 
-[Desktop](), [Server]()
+[Desktop](https://ubuntu.com/download/desktop), [Server](https://ubuntu.com/download/server)
 
 #### 3. Pfsense
 
-![https://i.imgur.com/Cj9aGY5.png](https://i.imgur.com/LB8E9Qo.png)
+![pfsense here](https://i.imgur.com/LB8E9Qo.png)
 
 
 [Pfsense Community Edition](https://www.pfsense.org/download/)

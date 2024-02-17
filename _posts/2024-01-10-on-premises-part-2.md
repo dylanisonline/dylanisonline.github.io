@@ -28,6 +28,7 @@ In creating this lab, I've realized that for some reason the Linux Version of VM
 #### 2. Create new virtual networks
 #### 3. Final Result:
 
+![vmnet settings](https://i.imgur.com/9MfIoBa.png)
 
 <br>
 
@@ -39,6 +40,9 @@ The first virtual machine to be created is the pfsense machine as it manages the
 #### 1. Create new virtual machine.
 #### 2. Choose the pfsense ISO
 #### 3. Settings used for Pfsense hardware:
+
+![alt](https://i.imgur.com/9MfIoBa.png)
+
 #### 4. Boot up Pfsense VM
 #### 5. Use default settings throughout the wizard
 #### 6. Reboot into machine
