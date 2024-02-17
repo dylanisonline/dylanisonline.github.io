@@ -12,10 +12,10 @@ In this part of the Active Directory "On-Premises" Lab series, I will go over ho
 <br>
 
 **Networks**:
-- Infrastructure Network (LAN): 
-- Database Network (OPT1):
-- Workstation Network (OP2):
-- Splunk Network (OP3):
+- Infrastructure Network (LAN): This is where the network is configured.
+- Database Network (OPT1): This network has our domain controller as well as the SQL server.
+- Workstation Network (OP2): All of the windows workstations are in this network.
+- Splunk Network (OP3): This network has our Splunk server where we can monitor any activity in the environment.
 
 <br>
 
@@ -52,6 +52,10 @@ The first virtual machine to be created is the pfsense machine as it manages the
 ## Assigning Interfaces
 ---
 #### 1. Option `1` on config console
+
+
+![alt](https://i.imgur.com/hsei9zh.png)
+
 #### 2. Options for assignment
 
 | Assignment | Interface |
@@ -62,20 +66,31 @@ The first virtual machine to be created is the pfsense machine as it manages the
 | OPT2 | em3 |
 | OPT3 | em4 |
 
+
+#### 3. Final Results:
+
+![alt](https://i.imgur.com/ua7Xqih.png)
+
+
 <br>
 
 ### Configuring IP Addresses
 ---
 
 #### 1. Option `2` on config console
+
+
+![alt](https://i.imgur.com/3hKDvDT.png)
+
+
 #### 2. Used the following options:
 
-| Interface Name | IP Address  | IP Address Range             | Subnet Mask | DHCP |
+| Interface Name | IP Address  | IP Address Range             | Subnet Mask | Enable DHCP |
 | ---            | ---         | ---                          | ---         | ---  |
-| LAN            | 192.168.1.1 | 192.168.1.11 - 192.168.1.200 | /24         | Yes  |
-| OPT1           | 192.168.2.1 | 192.168.2.11 - 192.168.2.200 | /24         | No   |
-| OPT2           | 192.168.3.1 | 192.168.3.11 - 192.168.3.200 | /24         | No   |
-| OPT3           | 192.168.4.1 | 192.168.4.11 - 192.168.4.200 | /24         | No   |
+| LAN            | 192.168.1.1 | 192.168.1.11 - 192.168.1.200 | 24         | Yes  |
+| OPT1           | 192.168.2.1 | -                            | 24         | No   |
+| OPT2           | 192.168.3.1 | -                            | 24         | No   |
+| OPT3           | 192.168.4.1 | -                            | 24         | No   |
 
 
 #### 3. Final Result: 
@@ -84,6 +99,6 @@ The first virtual machine to be created is the pfsense machine as it manages the
 
 
 
-#### [Return to Home Article](active-directory), [Go to Previous Step](on-premises-part-1), [Go to Next Step](on-premises-part-3)
+#### [Return to Home Article](active-directory), [Go to Previous Step](on-premises-part-1), [Go to Next Step (Web Browser Configuration)](on-premises-part-3)
 
 
