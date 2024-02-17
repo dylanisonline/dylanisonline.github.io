@@ -11,12 +11,11 @@ In this part of the Active Directory "On-Premises" Lab series, I will go over ho
 
 <br>
 
-| IP Address  | IP Address Range | Subnet Mask | VMnet | Description |
-| ---  | --- | --- | --- | --- |
-| 192.168.1.1 | 192.168.1.11 - 192.168.1.200 | /24 | vmnet2 | LAN: Where network administration takes place     |
-| 192.168.2.1 | 192.168.2.11 - 192.168.2.200 | /24 | vmnet3 | Database Network: Where all of the servers will be |
-| 192.168.3.1 | 192.168.3.11 - 192.168.3.200 | /24 | vmnet4 | Workstation Network: Where all of the workstation PCs will be |
-| 192.168.4.1 | 192.168.4.11 - 192.168.4.200 | /24 | vmnet5 | SIEM Network: Where our splunk server is located. 
+**Networks**:
+- Infrastructure Network (LAN): 
+- Database Network (OPT1):
+- Workstation Network (OP2):
+- Splunk Network (OP3):
 
 <br>
 
@@ -41,7 +40,7 @@ The first virtual machine to be created is the pfsense machine as it manages the
 #### 2. Choose the pfsense ISO
 #### 3. Settings used for Pfsense hardware:
 
-![alt](https://i.imgur.com/9MfIoBa.png)
+![alt](https://i.imgur.com/Kkn3Tt9.png)
 
 #### 4. Boot up Pfsense VM
 #### 5. Use default settings throughout the wizard
@@ -52,7 +51,7 @@ The first virtual machine to be created is the pfsense machine as it manages the
 
 ## Assigning Interfaces
 ---
-#### 1. Option `2` on config console
+#### 1. Option `1` on config console
 #### 2. Options for assignment
 
 | Assignment | Interface |
@@ -68,8 +67,18 @@ The first virtual machine to be created is the pfsense machine as it manages the
 ### Configuring IP Addresses
 ---
 
-#### 1. Option `3` on config console
-#### 2. 
+#### 1. Option `2` on config console
+#### 2. Used the following options:
+
+| Interface Name | IP Address  | IP Address Range             | Subnet Mask | DHCP |
+| ---            | ---         | ---                          | ---         | ---  |
+| LAN            | 192.168.1.1 | 192.168.1.11 - 192.168.1.200 | /24         | Yes  |
+| OPT1           | 192.168.2.1 | 192.168.2.11 - 192.168.2.200 | /24         | No   |
+| OPT2           | 192.168.3.1 | 192.168.3.11 - 192.168.3.200 | /24         | No   |
+| OPT3           | 192.168.4.1 | 192.168.4.11 - 192.168.4.200 | /24         | No   |
+
+
+#### 3. Final Result: 
 
 <br>
 

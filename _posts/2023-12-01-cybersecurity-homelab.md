@@ -51,7 +51,8 @@ Virtualization can be heavy on various hardware components. Luckily, I have a go
 
 1. [Configuring Firewall / Routing](homelab-part-1)
 2. [Firewall GUI Configuraton](homelab-part-2)
-3. []()
+3. [Setting Up Security Onion](homelab-part-3)
+4. []
 
 <br>
 
