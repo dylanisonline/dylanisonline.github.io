@@ -95,6 +95,8 @@ The first virtual machine to be created is the pfsense machine as it manages the
 
 #### 3. Final Result: 
 
+![alt](https://i.imgur.com/so6tNwT.png)
+
 <br>
 
 
