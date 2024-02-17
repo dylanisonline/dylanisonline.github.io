@@ -25,9 +25,11 @@ project_entries:
 
 
 old_project_entries:
-  - title: Lights, Camera, Prediction
-    url: language-tests
-    desc: A project using Python to implement machine learning algorithms to predict the success of a movie.
+  - title: Exploring Azure
+    url: exploring-azure
+    desc: A blog series that goes through my journey of understanding the Azure Cloud.
+  - title: Sec+ Preparation
+    desc: All my knowledge in preparation for the CompTIA Security+ Certification
 
 
 footer_entries:

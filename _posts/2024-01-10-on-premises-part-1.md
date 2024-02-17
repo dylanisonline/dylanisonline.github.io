@@ -52,11 +52,16 @@ easiest hypervisor to implement this setup due to how it manages host devices an
 
 #### 2. Ubuntu Desktop
 
+![alt](https://i.imgur.com/9ajMNLD.png)
+
 [Desktop](), [Server]()
 
 #### 3. Pfsense
 
-[Pfsense Community Edition]()
+![https://i.imgur.com/Cj9aGY5.png](https://i.imgur.com/LB8E9Qo.png)
+
+
+[Pfsense Community Edition](https://www.pfsense.org/download/)
 
 <br>
 
