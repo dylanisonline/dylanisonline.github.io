@@ -12,7 +12,10 @@ Now that the network segments are defined, there are more advanced options that 
 
 ## Creating Ubuntu Virtual Machine
 ---
-#### 1. Load Ubuntu 
+#### 1. Create new virtual machine with Ubuntu ISO
+#### 2. Settings for new virtual machine:
+
+
 
 <br>
 
