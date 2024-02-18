@@ -7,6 +7,7 @@ tags: [🚧, Active Directory, VMware]
 
 ## Configuring Domain Controller
 
+In a Active Directory Environment, the 
 
 ## Creating Windows Server VM
 ---
@@ -15,6 +16,7 @@ tags: [🚧, Active Directory, VMware]
 
 #### 2. Settings for Domain Controller:
 
+![Settings for Domain Controller]()
 
 ## House Keeping
 ---

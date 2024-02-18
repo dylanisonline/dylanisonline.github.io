@@ -64,11 +64,19 @@ Now that the network segments are defined, there are more advanced options that 
 
 ## Firewall Rules
 ---
+For testing purposes, we will allow all traffic to flow through the network. This is not recommended for actually enterprise settings.
 
-#### 1. Firewall -> Firewall Rule
+#### 1. Firewall -> Rules
 
+![Firewall -> Rules](https://i.imgur.com/JzmZPqF.png)
 
-<br>
+#### 2. On every interface add a firewall rule
+
+#### 3. Action: `pass` Protocol: `any`
+
+![Firewall Rule](https://i.imgur.com/3kFBn7k.png)
+
+#### 4. Save and Apply changes
 
 <br>
 
