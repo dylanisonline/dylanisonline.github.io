@@ -48,15 +48,8 @@ One of the primary functions of Active Directory is authentication and authoriza
 
 **☁️ Cloud:** Cloud-based Active Directory, hosted on virtualized infrastructure provided by a cloud service provider, offers a managed service approach. Eliminating the need for physical hardware, organizations benefit from elastic scalability, rapid resource provisioning, and automated updates. Security measures, including encryption, multi-factor authentication, and compliance certifications, are robustly implemented by the provider. 
 
-<br>
-
-
-### Importance of Understanding Active Directory
----
-
 
 <br>
-
 
 
 ### 🧙‍♂️ Choose your own Adventure

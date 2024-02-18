@@ -15,7 +15,7 @@ Now that the network segments are defined, there are more advanced options that 
 #### 1. Create new virtual machine with Ubuntu ISO
 #### 2. Settings for new virtual machine:
 
-
+![pfsense virutal machine settings](https://i.imgur.com/x52qlms.png)
 
 <br>
 
@@ -26,10 +26,34 @@ Now that the network segments are defined, there are more advanced options that 
 
 #### 2. Logging in with default login (username: `admin` password: `pfsense`)
 
-#### 3. Go 
+![default login](https://i.imgur.com/eeEZjT8.png)
+
+#### 3. Assign new DNS Servers. Primary: `8.8.8.8` Secondary `4.4.4.4`
+
+![Assigning new DNS Servers](https://i.imgur.com/ZgklWnH.png)
+
+#### 4. Allow Private and Bogon Networks to connect
+
+![Bogon and Private Networks](https://i.imgur.com/9dYVNsi.png)
+
+#### 5. Change default Admin Password
+
+![Admin Password Change](https://i.imgur.com/rfwRXFo.png)
 
 <br>
 
+## Renaming Interfaces
+---
 
+#### 1. Interfaces
+
+<br>
+
+## Firewall Rules
+---
+
+<br>
+
+<br>
 
 #### [Return to Home Article](active-directory), [Go to Previous Step](on-premises-part-2), [Go to Next Step](on-premises-part-4)
