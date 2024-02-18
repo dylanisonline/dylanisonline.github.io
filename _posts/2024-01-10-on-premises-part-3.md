@@ -17,6 +17,13 @@ Now that the network segments are defined, there are more advanced options that 
 
 ![pfsense virutal machine settings](https://i.imgur.com/x52qlms.png)
 
+#### 3. Once install is finished install vmware tools
+
+
+> sudo apt update && upgrade
+
+> sudo apt install open-vm-tools-desktop 
+
 <br>
 
 ## Connecting to web interface
@@ -45,12 +52,21 @@ Now that the network segments are defined, there are more advanced options that 
 ## Renaming Interfaces
 ---
 
-#### 1. Interfaces
+#### 1. Interfaces -> Choose Any Interface
+
+![Interfaces](https://i.imgur.com/9qOzu3a.png)
+
+#### 2. Change Interface Description
+
+![Changing interface name](https://i.imgur.com/zBOSlpo.png)
 
 <br>
 
 ## Firewall Rules
 ---
+
+#### 1. Firewall -> Firewall Rule
+
 
 <br>
 
