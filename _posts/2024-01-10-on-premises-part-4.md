@@ -43,17 +43,17 @@ In a Active Directory Environment, the domain controller
 
 #### 3. Promote to Domain Contoller
 
-![Domain Controller Promotion]()
+![Domain Controller Promotion](https://i.imgur.com/M6GODxG.png)
 
 #### 4. Set Domain Controller settings
 
-![Domain Controller Password]()
+![Domain Controller Password](https://i.imgur.com/YanAJ1v.png)
 
-![Domain Name]()
+![Domain Name](https://i.imgur.com/Z3sTlzJ.png)
 
 #### 5. Add Windows Certificate Service and Set new validity Period
 
-![Domain Controller Certificate Services]()
+![Domain Controller Certificate Services](https://i.imgur.com/4yvytfh.png)
 
 
 <br>
