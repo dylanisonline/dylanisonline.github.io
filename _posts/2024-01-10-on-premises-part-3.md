@@ -64,7 +64,7 @@ Now that the network segments are defined, there are more advanced options that 
 
 ## Firewall Rules
 ---
-For testing purposes, we will allow all traffic to flow through the network. This is not recommended for actually enterprise settings.
+For testing purposes, we will allow all traffic to flow through the network. This is not recommended for actual enterprise settings.
 
 #### 1. Firewall -> Rules
 

@@ -11,12 +11,11 @@ tags: [🚧, Azure]
 ### Why create a honeypot?
 
 
-### Step 1: Create an Azure account
+### Components
+---
 
-### Step 2: Create a virtual machine
-- Create a new resource group
-- Create network security group
-
-
-### Step 3: Create Log analytics workspace
+1. Windows Virtual Machine On Azure
+2. Azure Log Analytics Workspace
+3. Azure Sentinel SIEM
+4. IP Geolocation API intergration
 
