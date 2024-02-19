@@ -52,8 +52,8 @@ Virtualization can be heavy on various hardware components. Luckily, I have a go
 1. [Configuring Firewall / Routing](homelab-part-1)
 2. [Firewall GUI Configuraton](homelab-part-2)
 3. [Setting Up Security Onion](homelab-part-3)
-4. [Connecting Metasploitable Server]()
-5. [Connecting Kali Attack Machine]()
+4. [Connecting Metasploitable Server](homelab-part-4)
+5. [Connecting Kali Attack Machine](homelab-part-5)
 
 <br>
 
