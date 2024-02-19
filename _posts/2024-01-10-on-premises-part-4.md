@@ -27,23 +27,35 @@ In a Active Directory Environment, the domain controller
 
 #### 2. Configure IP Address of Server
 
+![Domain Controller IP Address]()
+
 <br>
 
 
 ## Server Configuration
 ---
 
-#### 1. Manage -> Add Roles and Features 
+#### 1. Manage -> Add Roles and Features
 
 #### 2. Server Roles -> Add Active Directory Domain Services
 
+![Directory Domain Services](https://i.imgur.com/bLWQRT6.png)
+
 #### 3. Promote to Domain Contoller
 
-#### 4. Add Windows Certificate Service
+![Domain Controller Promotion]()
 
-#### 5. 
+#### 4. Set Domain Controller settings
+
+![Domain Controller Password]()
+
+![Domain Name]()
+
+#### 5. Add Windows Certificate Service and Set new validity Period
+
+![Domain Controller Certificate Services]()
 
 
 <br>
 
-#### [Return to Home Article](active-directory), [Go to Previous Step](on-premises-part-3), [Go to Next Step](on-premises-part-5)
+##### [Return to Home Article](active-directory), [Go to Previous Step](on-premises-part-3), [Go to Next Step](on-premises-part-5)
