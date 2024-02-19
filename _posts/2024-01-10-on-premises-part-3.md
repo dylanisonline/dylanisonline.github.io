@@ -80,4 +80,4 @@ For testing purposes, we will allow all traffic to flow through the network. Thi
 
 <br>
 
-#### [Return to Home Article](active-directory), [Go to Previous Step](on-premises-part-2), [Go to Next Step](on-premises-part-4)
+##### [Return to Home Article](active-directory), [Go to Previous Step](on-premises-part-2), [Go to Next Step (Part 4 - Configuring Domain Controller)](on-premises-part-4)
