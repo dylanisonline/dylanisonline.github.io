@@ -10,9 +10,29 @@ tags: [🚧, Active Directory, VMware]
 ## Creating another Windows VM
 ---
 
-#### 1. VM Settings
+#### 1. VM Settings:
 
 ![Windows SQL Settings](https://i.imgur.com/szWzltL.png)
 
+<br>
 
-##### [Return to Home Article](active-directory), [Go to Previous Step](on-premises-part-4), [Go to Next Step](on-premises-part-6)
+## Install SSMS
+---
+
+SQL Server Manager Studio
+
+![]()
+
+<br>
+
+## Connecting to Domain Controller
+---
+
+![]()
+
+<br>
+
+
+
+
+##### [Return to Home Article](active-directory), [Go to Previous Step](on-premises-part-4), [Go to Next Step (Part 5 - Creating Users)](on-premises-part-6)
