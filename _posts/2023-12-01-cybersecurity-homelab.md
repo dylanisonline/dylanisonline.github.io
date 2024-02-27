@@ -3,57 +3,66 @@ layout: post
 tags: [virtualization, VMware]
 ---
 
-
-This series of post will go over how I setup my own virtualized Cybersecurity Analyst Environment using VMware.
-
-### Why create a Homelab?
----
-
-<img src="https://i.pinimg.com/originals/fb/5b/48/fb5b48cd0d259376d6fcd35ab8404cbf.gif" width=800 height=400>
-
-A homelab is a safe environment for cybersecurity enthusiests to implement configurations and learn new skills with minimal risk.
+**Technologies:** `VMware` `Pfsense` `Ubuntu` `Security Onion` `Metaploitable2`
 
 <br>
 
-### Testing Workstation
+### Why create a homelab?
 ---
-Virtualization can be heavy on various hardware components. Luckily, I have a good test bench for this setup, but following along with specs below mine can cause a varying outcome.
+Creating a virtual homelab offers a cost-effective and convenient means of exploring diverse IT and cybersecurity configurations. Virtualization technology enables users to replicate complex network environments and test various security setups without the need for expensive physical hardware. With the flexibility to adjust settings and resources according to individual needs, homelabs provide a safe and scalable platform for hands-on learning and skill development in cybersecurity. For this particular environment, I am using [VMware Workstation Pro 17]() as a hypervisor.
 
-- **Laptop:** Asus ROG Strix G15 Advantage Edition
-- **CPU:** AMD Ryzen 9 5900
-- **RAM:** 32 GB DDR4
-- **GPU:** AMD 6900XT
-- **Storage:** 1TB
-- **OS:** Ubuntu 22.04 x64
+<br>
+
+### Motivation
+---
+I am currently trying to break into the cybersecurity industry and I understand concepts better once I get hands-on experience. This lab will allow me to get real world experience with defense concepts and this environment will help me begin understanding the fundamentals of penetration testing.
 
 
 <br>
 
-## Lab Components
+
+### Lab Components
 ---
+<br>
+
+| Machine               | Description |
+| ---                   | ---         |
+| **Kali Linux**        | Threat Actor machine that will try to break into the metasploitable server |
+| **Metasploitable2**   | A deliberately vulnerable Linux server.                                    |
+| **Security Onion**    | IDS / IPS Solution for monitoring our environment and observing attacks.   |
+| **Analyst Machine**   | A computer that can access Security Onion Services.                        |
+| **Pfsense**           | Firewall / Routing Solution.                                               |
+| **Net Admin Machine** | Computer used to configure firewall settings.
+
+<br>
+
+### Test Bench Configuration
+---
+**CPU:** Ryzen 9
+**Memory:** 32 GB DDR4
+**Storage:** 1 TB SSD
+**Operating System:** Ubuntu 23.04 x86_64
+
+*To follow along with this lab, a large amount of memory will be the most useful hardware component*
 
 <br>
 
 
-| Machine       | Description           | 
-| ------------- | ------------- |
-| Pfsense    | Firewall / Routing Solution | 
-| Security Onion    | IDS / IPS Solution that will allow monitoring of this environment.      |
-| Metasploitable2 | A deliberately vulnerable server that will be targeted by our threat actor.     |
-| Kali Linux | Our threat actor machine that will attempt to attack the metasploitable server.|
-
-
+### Steps
+---
+1. [Configure Pfsense]() 
+2. [Configuring Security Onion]()
+3. [Connecting End Machines]()
+4. [Scanning Network]()
+5. [Basic Attacks]()
+6. [Next Steps]()
 
 <br>
 
-## Steps
----
 
-1. [Configuring Firewall / Routing](homelab-part-1)
-2. [Firewall GUI Configuraton](homelab-part-2)
-3. [Setting Up Security Onion](homelab-part-3)
-4. [Connecting Metasploitable Server](homelab-part-4)
-5. [Connecting Kali Attack Machine](homelab-part-5)
+#### Inspirations / Sources
+---
+[Cyberwox Academy]()
 
 <br>
 
