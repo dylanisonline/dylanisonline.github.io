@@ -7,6 +7,7 @@ tags: [virtualization, VMware]
 
 <br>
 
+
 ### Why create a homelab?
 ---
 Creating a virtual homelab offers a cost-effective and convenient means of exploring diverse IT and cybersecurity configurations. Virtualization technology enables users to replicate complex network environments and test various security setups without the need for expensive physical hardware. With the flexibility to adjust settings and resources according to individual needs, homelabs provide a safe and scalable platform for hands-on learning and skill development in cybersecurity. For this particular environment, I am using [VMware Workstation Pro 17]() as a hypervisor.
@@ -39,8 +40,11 @@ I am currently trying to break into the cybersecurity industry and I understand 
 ### Test Bench Configuration
 ---
 **CPU:** Ryzen 9
+
 **Memory:** 32 GB DDR4
+
 **Storage:** 1 TB SSD
+
 **Operating System:** Ubuntu 23.04 x86_64
 
 *To follow along with this lab, a large amount of memory will be the most useful hardware component*
@@ -50,8 +54,8 @@ I am currently trying to break into the cybersecurity industry and I understand 
 
 ### Steps
 ---
-1. [Configure Pfsense]() 
-2. [Configuring Security Onion]()
+1. [Configure Pfsense](homelab-part-1) 
+2. [Configuring Security Onion](homelab-part-2)
 3. [Connecting End Machines]()
 4. [Scanning Network]()
 5. [Basic Attacks]()
@@ -60,11 +64,7 @@ I am currently trying to break into the cybersecurity industry and I understand 
 <br>
 
 
-#### Inspirations / Sources
----
-[Cyberwox Academy]()
+##### Inspirations / Sources: [Cyberwox Academy]()
 
 <br>
 
-
-##### Inspiration: [Cyberwox]()
