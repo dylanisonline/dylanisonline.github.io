@@ -16,7 +16,7 @@ To prepare the environment for OpenWrt, I first configured VMware’s virtual ne
 By default, OpenWRT is downloaded as a .img file since it meant to be flashed onto network hardware.
 Since VMware Workstation does not natively support .img files, I needed to convert it to a vmdk file.
 
-After some research, I decided to using `qemu-tools` in WSL in order to complete the conversion
+After some research, I decided to using `qemu-tools` in WSL in order to complete the conversion.
 
 
 ```bash
