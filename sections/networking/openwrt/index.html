@@ -17,6 +17,7 @@
         <link rel="stylesheet" href="../../../assets/css/bootstrap.min.css">
         <link rel="stylesheet" href="../../../assets/css/dracula-ui.min.css">
         <link rel="stylesheet" href="../../../assets/css/mkdocs.min.css">
+            <link href="../../../assets/stylesheets/extra.css" rel="stylesheet">
 
         
             <link  rel="icon" type="image/x-icon" href="../../../assets/img/favicon.ico">
@@ -91,14 +92,6 @@
             class="
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
             Network Overview
-        </a>
-    </li>
-                            
-    <li class="drac-box-ternary">
-        <a href="../vmware-settings/"
-            class="
-            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            VMware Workstation Settings
         </a>
     </li>
                             
@@ -259,7 +252,7 @@
         <div class="container">
             <div class="row row-preview">
                 <div class="col">
-                    <a href="../vmware-settings/"
+                    <a href="../overview/"
                         class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover">
                         <i class="fa fa-arrow-left"></i> Previous
                     </a>
@@ -302,8 +295,20 @@
             <!-- block content -->
                 <section class="p-md-5 section-content">
     <article>
-        <p><h1 id="openwrt-setup">OpenWRT Setup</h1>
-<p>OpenWRT is an opensource </p></p>
+        <p><h1 id="openwrt-virtual-machine-setup">OpenWRT Virtual Machine Setup</h1>
+<p><br></p>
+<p><code>OpenWrt</code> acts as the lab’s virtual router and network gateway. It provides routing, firewall control, DHCP services, and traffic separation between the server and workstation subnets, helping the environment behave more like a real small enterprise network.</p>
+<h4 id="vmware-workstation-settings">VMware Workstation Settings</h4>
+<p>To prepare the environment for OpenWrt, I first configured VMware’s virtual networks to act as the backbone of the lab. These networks allow the router, servers, and workstations to communicate while keeping each subnet properly separated.</p>
+<p><br></p>
+<h4 id="preparing-openwrt-iso">Preparing OpenWRT ISO</h4>
+<p>By default, OpenWRT is downloaded as a .img file since it meant to be flashed onto network hardware.
+Since VMware Workstation does not natively support .img files, I needed to convert it to a vmdk file.</p>
+<p>After some research, I decided to using <code>qemu-tools</code> in WSL in order to complete the conversion</p>
+<pre><code class="language-bash">
+hello
+
+</code></pre></p>
     </article>
 </section>
             <!-- endblock -->
