@@ -2,13 +2,13 @@
 <html lang="en" data-bs-theme="dark">
 
 <head>
-        <title>OpenWRT Setup - dylanisonline</title>
+        <title>OpenWRT VM - dylanisonline</title>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         
-        <link rel="canonical" href="https://dylanisonline.github.io/sections/networking/openwrt/">
+        <link rel="canonical" href="https://dylanisonline.github.io/sections/networking/openwrt-vm/">
         <meta name="author" content="Dylan Phan">
 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -99,7 +99,7 @@
         <a href="./"
             class=" active 
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            OpenWRT Setup
+            OpenWRT VM
         </a>
     </li>
                     </ul>
@@ -118,14 +118,6 @@
                 <div class="collapse "
                     id="🖥️-active-directory-collapse">
                     <ul class="mb-5 drac-list drac-list-none">
-                            
-    <li class="drac-box-ternary">
-        <a href="../../active-directory/overview/"
-            class="
-            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Overview
-        </a>
-    </li>
                             
     <li class="drac-box-ternary">
         <a href="../../active-directory/domain-controller/"
@@ -258,7 +250,7 @@
                     </a>
                 </div>
                 <div class="col">
-                    <a href="../../active-directory/overview/"
+                    <a href="../../active-directory/domain-controller/"
                         class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover" style="padding-left: 3%;">
                         Next <i class="fa fa-arrow-right"></i>
                     </a>
@@ -298,18 +290,72 @@
         <p><h1 id="openwrt-virtual-machine-setup">OpenWRT Virtual Machine Setup</h1>
 <p><br></p>
 <p><code>OpenWrt</code> acts as the lab’s virtual router and network gateway. It provides routing, firewall control, DHCP services, and traffic separation between the server and workstation subnets, helping the environment behave more like a real small enterprise network.</p>
+<hr />
 <p><br></p>
+<h4 id="preparing-openwrt-vmdk">Preparing OpenWRT .vmdk</h4>
+<p>By default, OpenWRT is <a href="https://downloads.openwrt.org/releases/">downloaded</a> as a .img file since it meant to be flashed onto network hardware.
+Since VMware Workstation does not natively support .img files, I needed to convert it to a .vmdk file.</p>
+<p>After some research, I decided to using <code>qemu-tools</code> in WSL 2.0 in order to complete the conversion.</p>
+<p><br></p>
+<p><strong>Installing Qemu Tools on Ubuntu WSL 2.0</strong></p>
+<pre><code>
+&gt; sudo apt update
+&gt; sudo apt install qemu-utils -y
+
+### Creating Directory in my home folder for the files
+&gt; mkdir openwrt
+
+</code></pre>
+<p><br></p>
+<p><strong>Converting .img to .vmdk</strong></p>
+<pre><code class="language-bash">
+&gt; qemu-img convert -f raw -O vmdk openwrt.img openwrt.vmdk
+&gt; ls
+
+### openwrt.img openwrt.vmdk 
+</code></pre>
+<p><br></p>
+<hr />
 <h4 id="vmware-workstation-settings">VMware Workstation Settings</h4>
 <p>To prepare the environment for OpenWrt, I first configured VMware’s virtual networks to act as the backbone of the lab. These networks allow the router, servers, and workstations to communicate while keeping each subnet properly separated.</p>
 <p><br></p>
-<h4 id="preparing-openwrt-iso">Preparing OpenWRT ISO</h4>
-<p>By default, OpenWRT is downloaded as a .img file since it meant to be flashed onto network hardware.
-Since VMware Workstation does not natively support .img files, I needed to convert it to a vmdk file.</p>
-<p>After some research, I decided to using <code>qemu-tools</code> in WSL in order to complete the conversion.</p>
-<pre><code class="language-bash">
-hello
-
-</code></pre></p>
+<p><strong>VMware Virtual Networks</strong></p>
+<p><img alt="VMware Vnet editor" src="../../../assets/images/networking/vmware/virtual-network-editor.png" style="width:50%; display:block; margin:0 auto; border-radius:8px;" /></p>
+<p><br></p>
+<p><code>AD-SERVERNET — 10.10.10.0/24</code></p>
+<ul>
+<li>Host-only VMware network</li>
+<li>Used by domain controllers, file servers, and other infrastructure servers</li>
+<li>VMware DHCP disabled</li>
+<li>IP addressing and network services are managed through OpenWrt</li>
+</ul>
+<p><code>AD-WORKSTATION — 10.10.20.0/24</code></p>
+<ul>
+<li>Host-only VMware network</li>
+<li>Used by domain-joined workstations and client devices</li>
+<li>VMware DHCP disabled</li>
+<li>OpenWrt provides DHCP leases and routing for connected workstations</li>
+</ul>
+<p><code>WAN</code></p>
+<ul>
+<li>Connected to VMware’s NAT-enabled network</li>
+<li>DHCP enabled</li>
+<li>Allows the OpenWrt WAN interface to automatically receive an IP address</li>
+<li>Provides internet access to the internal server and workstation networks through OpenWrt </li>
+</ul>
+<p><br></p>
+<hr />
+<p><br></p>
+<h3 id="openwrt-virtual-machine-settings">OpenWRT Virtual Machine Settings</h3>
+<p><br></p>
+<p><img alt="VMware Vnet editor" src="../../../assets/images/networking/vmware/openwrt-vm.png" style="width:50%; display:block; margin:0 auto; border-radius:8px;" /></p>
+<p><br></p>
+<p><code>Hard Disk:</code> With the converted .vmdk file, we can attach the boot drive to the
+virtual hard disk image to boot into Openwrt.</p>
+<p><code>Network Adapter:</code> Connected to VMware’s NAT-enabled network. This interface receives an IP address through DHCP and provides the OpenWrt router with internet access. </p>
+<p><code>Network Adapter 2:</code> Connected to the AD-SERVERNET host-only network. This interface serves as the default gateway for domain controllers, file servers, and other infrastructure servers on the 10.10.10.0/24 subnet. </p>
+<p><code>Network Adapter 3:</code> Connected to the AD-WORKSTATION host-only network. This interface provides routing and DHCP services for domain-joined workstations on the 10.10.20.0/24 subnet. </p>
+<p><br></p></p>
     </article>
 </section>
             <!-- endblock -->
