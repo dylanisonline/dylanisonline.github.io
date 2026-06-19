@@ -9,6 +9,7 @@ nav:
       - Network Overview: sections/networking/overview.md
       - OpenWRT VM: sections/networking/openwrt-vm.md
       - OpenWRT Config: sections/networking/openwrt-config.md
+      - OpenWRT Web GUI: sections/networking/openwrt-gui.md
   - 🖥️ Active Directory:
 #      - Overview: sections/active-directory/overview.md
       - Domain Controller Setup: sections/active-directory/domain-controller.md
