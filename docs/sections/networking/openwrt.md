@@ -4,6 +4,8 @@
 
 `OpenWrt` acts as the lab’s virtual router and network gateway. It provides routing, firewall control, DHCP services, and traffic separation between the server and workstation subnets, helping the environment behave more like a real small enterprise network.
 
+<br>
+
 #### VMware Workstation Settings
 
 To prepare the environment for OpenWrt, I first configured VMware’s virtual networks to act as the backbone of the lab. These networks allow the router, servers, and workstations to communicate while keeping each subnet properly separated.
