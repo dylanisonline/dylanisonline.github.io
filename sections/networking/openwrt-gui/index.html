@@ -1,11 +1,11 @@
 <!DOCTYPE html><html lang="en" data-bs-theme="dark"><head>
-        <title>Network Overview - dylanisonline</title>
+        <title>OpenWRT Web GUI - dylanisonline</title>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         
-        <link rel="canonical" href="https://dylanisonline.github.io/sections/networking/overview/">
+        <link rel="canonical" href="https://dylanisonline.github.io/sections/networking/openwrt-gui/">
         <meta name="author" content="Dylan Phan">
 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -84,7 +84,7 @@
                     <ul class="mb-5 drac-list drac-list-none">
                             
     <li class="drac-box-ternary">
-        <a href="./" class=" active 
+        <a href="../overview/" class="
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
             Network Overview
         </a>
@@ -105,7 +105,7 @@
     </li>
                             
     <li class="drac-box-ternary">
-        <a href="../openwrt-gui/" class="
+        <a href="./" class=" active 
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
             OpenWRT Web GUI
         </a>
@@ -228,12 +228,12 @@
         <div class="container">
             <div class="row row-preview">
                 <div class="col">
-                    <a href="../../.." class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover">
+                    <a href="../openwrt-config/" class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover">
                         <i class="fa fa-arrow-left"></i> Previous
                     </a>
                 </div>
                 <div class="col">
-                    <a href="../openwrt-vm/" class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover" style="padding-left: 3%;">
+                    <a href="../../active-directory/domain-controller/" class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover" style="padding-left: 3%;">
                         Next <i class="fa fa-arrow-right"></i>
                     </a>
                 </div>
@@ -268,70 +268,7 @@
             <!-- block content -->
                 <section class="p-md-5 section-content">
     <article>
-        <p></p><h1 id="networking-overview">Networking Overview</h1>
-<p><br></p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/networking/network.png" data-desc-position="bottom"><img alt="Active Directory Lab Network Diagram" src="../../../assets/images/networking/network.png" style="width:80%; display:block; margin:0 auto; border-radius:8px;"></a></p>
-<p><br></p>
-<h3 id="server-network">Server Network</h3>
-<p>The server network in this lab will be used to house the various servers that will host
-critical domain resources and services.</p>
-<p><br></p>
-<table>
-<thead>
-<tr>
-<th>Server</th>
-<th>Role</th>
-<th>IP Address</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Kojima-DC01</td>
-<td>Domain Controller / DNS</td>
-<td>10.10.10.10</td>
-</tr>
-<tr>
-<td>Kojima-FS01</td>
-<td>File Server</td>
-<td>10.10.10.20</td>
-</tr>
-<tr>
-<td>Kojima-APPS01</td>
-<td>Ubuntu server that will be used to serve Docker container applications to other machines on the network.</td>
-<td>10.10.10.30</td>
-</tr>
-</tbody>
-</table>
-<p><br>
-<br></p>
-<hr>
-<p><br></p>
-<h3 id="workstation-network">Workstation Network</h3>
-<p>This network will house the Windows 11 clients that will be accessing services and
-resources from the server network</p>
-<p><br></p>
-<table>
-<thead>
-<tr>
-<th>Server</th>
-<th>Role</th>
-<th>IP Address</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Kojima-WS01 (Admin Machine)</td>
-<td>This machine will be used by a "IT Administrator." They should have the ability to create and manage domain resources and services</td>
-<td>DHCP</td>
-</tr>
-<tr>
-<td>Kojima-WS02 (Standard Machine)</td>
-<td>This is for a standard enterprise user that will not have administrator privileges</td>
-<td>DHCP</td>
-</tr>
-</tbody>
-</table>
-<p><br></p><p></p>
+        <p></p><h3 id="openwrt-web-gui">OpenWRT Web Gui</h3><p></p>
     </article>
 </section>
             <!-- endblock -->

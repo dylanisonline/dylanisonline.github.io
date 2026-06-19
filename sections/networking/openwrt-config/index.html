@@ -103,6 +103,13 @@
             OpenWRT Config
         </a>
     </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../openwrt-gui/" class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            OpenWRT Web GUI
+        </a>
+    </li>
                     </ul>
                 </div>
             </li>
@@ -226,7 +233,7 @@
                     </a>
                 </div>
                 <div class="col">
-                    <a href="../../active-directory/domain-controller/" class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover" style="padding-left: 3%;">
+                    <a href="../openwrt-gui/" class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover" style="padding-left: 3%;">
                         Next <i class="fa fa-arrow-right"></i>
                     </a>
                 </div>
@@ -263,9 +270,91 @@
     <article>
         <p></p><h1 id="openwrt-configuration">OpenWRT Configuration</h1>
 <p><br></p>
+<table>
+<thead>
+<tr>
+<th>Interface</th>
+<th>VMware Network</th>
+<th>Gateway</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>eth0</td>
+<td>VMware NAT</td>
+<td>DHCP Client</td>
+</tr>
+<tr>
+<td>eth1</td>
+<td>AD-SERVERNET</td>
+<td>10.10.10.1/24</td>
+</tr>
+<tr>
+<td>eth2</td>
+<td>AD-WORKSTATION</td>
+<td>10.10.20.1/24</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<p><strong>Verifying Interfaces</strong></p>
+<pre><code class="language-bash">ip link
+</code></pre>
+<p><br></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/networking/openwrt-command-ip-link.PNG" data-desc-position="bottom"><img alt="OpenWRT - Command - ip link" src="../../../assets/images/networking/openwrt-command-ip-link.PNG" style="width:80%; display:block; margin:0; border-radius:8px;"></a></p>
+<p><br></p>
 <hr>
 <p><br></p>
-<h3 id="openwrt-web-gui">OpenWRT Web Gui</h3><p></p>
+<h4 id="wan-configuration">WAN Configuration</h4>
+<p><strong>Configuring WAN interface:</strong></p>
+<pre><code class="language-bash">
+uci set network.wan='interface' 
+uci set network.wan.device='eth0' 
+uci set network.wan.proto='dhcp'
+
+</code></pre>
+<p><br></p>
+<p>By default, OpenWRT assigned eth0 to the br-lan bridge and used it as the initial LAN interface. Because this adapter was intended to provide upstream internet connectivity, it needed to be removed from the LAN bridge and configured as a DHCP-based WAN interface.</p>
+<p><br></p>
+<p><strong>Removing eth0 from br-lan:</strong></p>
+<pre><code class="language-bash">
+uci del_list network.@device[0].ports='eth0'
+
+### Commiting Changes and restarting network services
+uci commit network
+/etc/init.d/network restart
+
+### Verifying br-lan has been removed
+ip addr
+
+</code></pre>
+<p><br></p>
+<p><strong>Verifying eth0 is receiving IP Address:</strong></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/networking/openwrt-wan-delete-bridge.PNG" data-desc-position="bottom"><img alt="OpenWRT - Command - ip addr" src="../../../assets/images/networking/openwrt-wan-delete-bridge.PNG" style="width:80%; display:block; margin:0; border-radius:8px;"></a></p>
+<p><br></p>
+<p><strong>Verifying External Connectivity</strong></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/networking/openwrt-ping-test.PNG" data-desc-position="bottom"><img alt="OpenWRT - Command - ip addr" src="../../../assets/images/networking/openwrt-ping-test.PNG" style="width:80%; display:block; margin:0; border-radius:8px;"></a></p>
+<p><br></p>
+<hr>
+<p><br></p>
+<h4 id="server-and-workstation-network">Server and Workstation Network</h4>
+<p><br></p>
+<p><strong>Server - eth1</strong></p>
+<pre><code class="language-bash">
+</code></pre>
+<p><br></p>
+<p><strong>Workstation - eth2</strong></p>
+<pre><code class="language-bash">
+</code></pre>
+<p><br></p>
+<hr>
+<p><br></p>
+<h4 id="_1"></h4>
+<pre><code class="language-bash">
+</code></pre>
+<p><br></p>
+<hr>
+<p><br></p><p></p>
     </article>
 </section>
             <!-- endblock -->
