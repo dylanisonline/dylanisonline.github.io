@@ -8,6 +8,7 @@ nav:
   - 🌐 Networking:
       - Network Overview: sections/networking/overview.md
       - OpenWRT VM: sections/networking/openwrt-vm.md
+      - OpenWRT Config: sections/networking/openwrt-config.md
   - 🖥️ Active Directory:
 #      - Overview: sections/active-directory/overview.md
       - Domain Controller Setup: sections/active-directory/domain-controller.md
@@ -30,3 +31,7 @@ markdown_extensions:
 
 extra_css:
   - assets/stylesheets/extra.css
+
+plugins:
+  - search
+  - glightbox
