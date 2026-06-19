@@ -7,9 +7,9 @@ nav:
   - Home: index.md
   - 🌐 Networking:
       - Network Overview: sections/networking/overview.md
-      - OpenWRT Setup: sections/networking/openwrt.md
+      - OpenWRT VM: sections/networking/openwrt-vm.md
   - 🖥️ Active Directory:
-      - Overview: sections/active-directory/overview.md
+#      - Overview: sections/active-directory/overview.md
       - Domain Controller Setup: sections/active-directory/domain-controller.md
       - Account Creation: sections/active-directory/account-creation.md
       - Joining Computers: sections/active-directory/join-workstations.md
