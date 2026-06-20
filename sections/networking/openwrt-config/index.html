@@ -350,10 +350,11 @@ uci set network.lan.netmask='255.255.255.0'
 <p><br></p>
 <p><strong>Workstation - eth2</strong></p>
 <pre><code class="language-bash">
-uci set network.lan.device='eth2' 
-uci set network.lan.proto='static' 
-uci set network.lan.ipaddr='10.10.20.1' 
-uci set network.lan.netmask='255.255.255.0'
+uci set network.workstation='interface' 
+uci set network.workstation.device='eth2' 
+uci set network.workstation.proto='static' 
+uci set network.workstation.ipaddr='10.10.20.1' 
+uci set network.workstation.netmask='255.255.255.0'
 
 </code></pre>
 <p><br></p>
@@ -365,15 +366,11 @@ uci set network.lan.netmask='255.255.255.0'
 <p><br></p>
 <p><strong>Confirm Changes</strong></p>
 <pre><code class="language-bash">
-ip link
+ip addr
 
 </code></pre>
 <p><br></p>
-<hr>
-<p><br></p>
-<h4 id="_1"></h4>
-<pre><code class="language-bash">
-</code></pre>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/networking/openwrt-ipaddr.png" data-desc-position="bottom"><img alt="OpenWRT - Command - ip addr" src="../../../assets/images/networking/openwrt-ipaddr.png" style="width:80%; display:block; margin:0; border-radius:8px;"></a></p>
 <p><br></p>
 <hr>
 <p><br></p><p></p>
