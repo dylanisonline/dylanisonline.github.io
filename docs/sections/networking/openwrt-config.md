@@ -100,10 +100,11 @@ uci set network.lan.netmask='255.255.255.0'
 **Workstation - eth2**
 ```bash
 
-uci set network.lan.device='eth2' 
-uci set network.lan.proto='static' 
-uci set network.lan.ipaddr='10.10.20.1' 
-uci set network.lan.netmask='255.255.255.0'
+uci set network.workstation='interface' 
+uci set network.workstation.device='eth2' 
+uci set network.workstation.proto='static' 
+uci set network.workstation.ipaddr='10.10.20.1' 
+uci set network.workstation.netmask='255.255.255.0'
 
 ```
 <br>
@@ -123,25 +124,20 @@ uci commit network
 
 ```bash
 
-ip link
+ip addr
 
 ```
+
+<br>
+
+
+![OpenWRT - Command - ip addr](../../assets/images/networking/openwrt-ipaddr.png){ style="width:80%; display:block; margin:0; border-radius:8px;" }
 
 <br>
 
 ---
 <br>
 
-#### 
 
-```bash
-
-```
-
-<br>
-
----
-
-<br>
 
 
