@@ -89,13 +89,44 @@ ip addr
 
 ```bash
 
+uci set network.lan.device='eth1' 
+uci set network.lan.proto='static' 
+uci set network.lan.ipaddr='10.10.10.1' 
+uci set network.lan.netmask='255.255.255.0'
+
 ```
 <br>
 
 **Workstation - eth2**
 ```bash
 
+uci set network.lan.device='eth2' 
+uci set network.lan.proto='static' 
+uci set network.lan.ipaddr='10.10.20.1' 
+uci set network.lan.netmask='255.255.255.0'
+
 ```
+<br>
+
+
+**Commit Changes**
+```bash
+uci commit network
+/etc/init.d/network restart
+
+```
+
+<br>
+
+
+**Confirm Changes**
+
+```bash
+
+ip link
+
+```
+
 <br>
 
 ---
