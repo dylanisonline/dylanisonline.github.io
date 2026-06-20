@@ -341,10 +341,32 @@ ip addr
 <p><br></p>
 <p><strong>Server - eth1</strong></p>
 <pre><code class="language-bash">
+uci set network.lan.device='eth1' 
+uci set network.lan.proto='static' 
+uci set network.lan.ipaddr='10.10.10.1' 
+uci set network.lan.netmask='255.255.255.0'
+
 </code></pre>
 <p><br></p>
 <p><strong>Workstation - eth2</strong></p>
 <pre><code class="language-bash">
+uci set network.lan.device='eth2' 
+uci set network.lan.proto='static' 
+uci set network.lan.ipaddr='10.10.20.1' 
+uci set network.lan.netmask='255.255.255.0'
+
+</code></pre>
+<p><br></p>
+<p><strong>Commit Changes</strong></p>
+<pre><code class="language-bash">uci commit network
+/etc/init.d/network restart
+
+</code></pre>
+<p><br></p>
+<p><strong>Confirm Changes</strong></p>
+<pre><code class="language-bash">
+ip link
+
 </code></pre>
 <p><br></p>
 <hr>
