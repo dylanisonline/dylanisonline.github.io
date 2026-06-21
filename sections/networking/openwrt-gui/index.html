@@ -123,23 +123,9 @@
                     <ul class="mb-5 drac-list drac-list-none">
                             
     <li class="drac-box-ternary">
-        <a href="../../active-directory/domain-controller/" class="
+        <a href="../../active-directory/dc-setup/" class="
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
             Domain Controller Setup
-        </a>
-    </li>
-                            
-    <li class="drac-box-ternary">
-        <a href="../../active-directory/account-creation/" class="
-            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Account Creation
-        </a>
-    </li>
-                            
-    <li class="drac-box-ternary">
-        <a href="../../active-directory/join-workstations/" class="
-            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Joining Computers
         </a>
     </li>
                     </ul>
@@ -147,31 +133,56 @@
             </li>
             <li class="drac-box">
                 <a href="#" class=" collapsed 
-                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover" data-bs-toggle="collapse" data-bs-target="#👥-ous/groups/gpos-collapse" aria-expanded="false">
-                    👥 OUs/Groups/GPOs
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover" data-bs-toggle="collapse" data-bs-target="#👥-identity-and-access-management-collapse" aria-expanded="false">
+                    👥 Identity and Access Management
                 </a>
 
-                <div class="collapse " id="👥-ous/groups/gpos-collapse">
+                <div class="collapse " id="👥-identity-and-access-management-collapse">
                     <ul class="mb-5 drac-list drac-list-none">
                             
     <li class="drac-box-ternary">
-        <a href="../../groups-and-gpos/ous/" class="
+        <a href="../../iam/iam-ou-design/" class="
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            OUs
+            OU Design
         </a>
     </li>
                             
     <li class="drac-box-ternary">
-        <a href="../../groups-and-gpos/groups/" class="
+        <a href="../../iam/iam-user-accounts/" class="
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Groups
+            User and Admin Accounts
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="#" class=" collapsed 
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover" data-bs-toggle="collapse" data-bs-target="#💻-workstations-collapse" aria-expanded="false">
+                    💻 Workstations
+                </a>
+
+                <div class="collapse " id="💻-workstations-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../workstations/workstation-roles/" class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Workstation Roles
         </a>
     </li>
                             
     <li class="drac-box-ternary">
-        <a href="../../groups-and-gpos/gpos/" class="
+        <a href="../../workstations/workstation-gpos/" class="
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            GPOs
+            Workstation GPOs
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../workstations/workstation-onboarding/" class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Workstation Onboarding
         </a>
     </li>
                     </ul>
@@ -233,7 +244,7 @@
                     </a>
                 </div>
                 <div class="col">
-                    <a href="../../active-directory/domain-controller/" class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover" style="padding-left: 3%;">
+                    <a href="../../active-directory/dc-setup/" class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover" style="padding-left: 3%;">
                         Next <i class="fa fa-arrow-right"></i>
                     </a>
                 </div>
@@ -285,18 +296,14 @@ virtual machine could reach the gateway (10.10.10.1)</p>
 <p><br></p>
 <hr>
 <p><br></p>
-<h3 id="configuring-interfaces">Configuring Interfaces</h3>
+<h4 id="configuring-interfaces-and-dhcp">Configuring Interfaces and DHCP</h4>
 <p><br></p>
-<p><strong>Verifying Network Interfaces</strong></p>
-<p>Network -&gt; Interfaces</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/networking/openwrt-interfaces.png" data-desc-position="bottom"><img alt="Web GUI Interfaces" src="../../../assets/images/networking/openwrt-interfaces.png" style="width:40%; display:block; margin:0 ; border-radius:8px;"></a></p>
-<p><br></p>
-<h4 id="configuring-dhcp">Configuring DHCP</h4>
-<p><br></p>
+<p>Lan Interface -&gt; Edit -&gt; DHCP Server</p>
 <p>Disabling DHCP on server network (LAN Interface)</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/networking/openwrt-disableDHCPonLAN.png" data-desc-position="bottom"><img alt="Disabling DHCP on Servernet" src="../../../assets/images/networking/openwrt-disableDHCPonLAN.png" style="width:40%; display:block; margin:0 ; border-radius:8px;"></a></p>
 <p><br></p>
 <p><strong>Enabling DHCP on workstation network (workstation interface)</strong></p>
+<p>Workstation Interface -&gt; Edit -&gt; DHCP Server</p>
 <p>Configuring these settings will allow our workstation network to give hosts IP address automatically with a range from <code>10.10.20.100 - 199</code></p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/networking/openwrt-dhcpworkstation.png" data-desc-position="bottom"><img alt="Enabling DHCP on workstation network" src="../../../assets/images/networking/openwrt-dhcpworkstation.png" style="width:40%; display:block; margin:0 ; border-radius:8px;"></a></p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/networking/openwrt-workstationdhcp.png" data-desc-position="bottom"><img alt="Enabling DHCP on workstation network part 2" src="../../../assets/images/networking/openwrt-workstationdhcp.png" style="width:40%; display:block; margin:0 ; border-radius:8px;"></a></p>
@@ -305,7 +312,9 @@ virtual machine could reach the gateway (10.10.10.1)</p>
 <p>Assigning the interface to the lan zone allowed DHCP traffic from the workstation network to reach OpenWrt.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/networking/openwrt-workstation-firewallzone.png" data-desc-position="bottom"><img alt="Firewall Zone" src="../../../assets/images/networking/openwrt-workstation-firewallzone.png" style="width:40%; display:block; margin:0 ; border-radius:8px;"></a></p>
 <p><br></p>
-<p><strong>Verifying Adressing on both Networks</strong></p>
+<hr>
+<p><br></p>
+<h3 id="verifying-addressing-on-both-networks">Verifying Addressing on both Networks</h3>
 <p><code>Note:</code> <em>For context, I had a Fedora Workstation Virtual machine that I had to test DHCP connectivity.</em></p>
 <p><br></p>
 <pre><code class="language-bash">

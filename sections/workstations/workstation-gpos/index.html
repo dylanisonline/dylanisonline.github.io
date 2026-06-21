@@ -1,11 +1,11 @@
 <!DOCTYPE html><html lang="en" data-bs-theme="dark"><head>
-        <title>OpenWRT Config - dylanisonline</title>
+        <title>Workstation GPOs - dylanisonline</title>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         
-        <link rel="canonical" href="https://dylanisonline.github.io/sections/networking/openwrt-config/">
+        <link rel="canonical" href="https://dylanisonline.github.io/sections/workstations/workstation-gpos/">
         <meta name="author" content="Dylan Phan">
 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -75,37 +75,37 @@
                 </a>
             </li>
             <li class="drac-box">
-                <a href="#" class=" active 
-                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover" data-bs-toggle="collapse" data-bs-target="#🌐-networking-collapse" aria-expanded="true">
+                <a href="#" class=" collapsed 
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover" data-bs-toggle="collapse" data-bs-target="#🌐-networking-collapse" aria-expanded="false">
                     🌐 Networking
                 </a>
 
-                <div class="collapse  show " id="🌐-networking-collapse">
+                <div class="collapse " id="🌐-networking-collapse">
                     <ul class="mb-5 drac-list drac-list-none">
                             
     <li class="drac-box-ternary">
-        <a href="../overview/" class="
+        <a href="../../networking/overview/" class="
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
             Network Overview
         </a>
     </li>
                             
     <li class="drac-box-ternary">
-        <a href="../openwrt-vm/" class="
+        <a href="../../networking/openwrt-vm/" class="
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
             OpenWRT VM
         </a>
     </li>
                             
     <li class="drac-box-ternary">
-        <a href="./" class=" active 
+        <a href="../../networking/openwrt-config/" class="
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
             OpenWRT Config
         </a>
     </li>
                             
     <li class="drac-box-ternary">
-        <a href="../openwrt-gui/" class="
+        <a href="../../networking/openwrt-gui/" class="
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
             OpenWRT Web GUI
         </a>
@@ -157,30 +157,30 @@
                 </div>
             </li>
             <li class="drac-box">
-                <a href="#" class=" collapsed 
-                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover" data-bs-toggle="collapse" data-bs-target="#💻-workstations-collapse" aria-expanded="false">
+                <a href="#" class=" active 
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover" data-bs-toggle="collapse" data-bs-target="#💻-workstations-collapse" aria-expanded="true">
                     💻 Workstations
                 </a>
 
-                <div class="collapse " id="💻-workstations-collapse">
+                <div class="collapse  show " id="💻-workstations-collapse">
                     <ul class="mb-5 drac-list drac-list-none">
                             
     <li class="drac-box-ternary">
-        <a href="../../workstations/workstation-roles/" class="
+        <a href="../workstation-roles/" class="
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
             Workstation Roles
         </a>
     </li>
                             
     <li class="drac-box-ternary">
-        <a href="../../workstations/workstation-gpos/" class="
+        <a href="./" class=" active 
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
             Workstation GPOs
         </a>
     </li>
                             
     <li class="drac-box-ternary">
-        <a href="../../workstations/workstation-onboarding/" class="
+        <a href="../workstation-onboarding/" class="
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
             Workstation Onboarding
         </a>
@@ -239,12 +239,12 @@
         <div class="container">
             <div class="row row-preview">
                 <div class="col">
-                    <a href="../openwrt-vm/" class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover">
+                    <a href="../workstation-roles/" class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover">
                         <i class="fa fa-arrow-left"></i> Previous
                     </a>
                 </div>
                 <div class="col">
-                    <a href="../openwrt-gui/" class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover" style="padding-left: 3%;">
+                    <a href="../workstation-onboarding/" class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover" style="padding-left: 3%;">
                         Next <i class="fa fa-arrow-right"></i>
                     </a>
                 </div>
@@ -279,112 +279,7 @@
             <!-- block content -->
                 <section class="p-md-5 section-content">
     <article>
-        <p></p><h1 id="openwrt-configuration">OpenWRT Configuration</h1>
-<p><br></p>
-<table>
-<thead>
-<tr>
-<th>Interface</th>
-<th>VMware Network</th>
-<th>Gateway</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>eth0</td>
-<td>VMware NAT</td>
-<td>DHCP Client</td>
-</tr>
-<tr>
-<td>eth1</td>
-<td>AD-SERVERNET</td>
-<td>10.10.10.1/24</td>
-</tr>
-<tr>
-<td>eth2</td>
-<td>AD-WORKSTATION</td>
-<td>10.10.20.1/24</td>
-</tr>
-</tbody>
-</table>
-<p><br></p>
-<p><strong>Verifying Interfaces</strong></p>
-<pre><code class="language-bash">ip link
-</code></pre>
-<p><br></p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/networking/openwrt-command-ip-link.PNG" data-desc-position="bottom"><img alt="OpenWRT - Command - ip link" src="../../../assets/images/networking/openwrt-command-ip-link.PNG" style="width:80%; display:block; margin:0; border-radius:8px;"></a></p>
-<p><br></p>
-<hr>
-<p><br></p>
-<h4 id="wan-configuration">WAN Configuration</h4>
-<p><strong>Configuring WAN interface:</strong></p>
-<pre><code class="language-bash">
-uci set network.wan='interface' 
-uci set network.wan.device='eth0' 
-uci set network.wan.proto='dhcp'
-
-</code></pre>
-<p><br></p>
-<p>By default, OpenWRT assigned eth0 to the br-lan bridge and used it as the initial LAN interface. Because this adapter was intended to provide upstream internet connectivity, it needed to be removed from the LAN bridge and configured as a DHCP-based WAN interface.</p>
-<p><br></p>
-<p><strong>Removing eth0 from br-lan:</strong></p>
-<pre><code class="language-bash">
-uci del_list network.@device[0].ports='eth0'
-
-### Commiting Changes and restarting network services
-uci commit network
-/etc/init.d/network restart
-
-### Verifying br-lan has been removed
-ip addr
-
-</code></pre>
-<p><br></p>
-<p><strong>Verifying eth0 is receiving IP Address:</strong></p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/networking/openwrt-wan-delete-bridge.PNG" data-desc-position="bottom"><img alt="OpenWRT - Command - ip addr" src="../../../assets/images/networking/openwrt-wan-delete-bridge.PNG" style="width:80%; display:block; margin:0; border-radius:8px;"></a></p>
-<p><br></p>
-<p><strong>Verifying External Connectivity</strong></p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/networking/openwrt-ping-test.PNG" data-desc-position="bottom"><img alt="OpenWRT - Command - ip addr" src="../../../assets/images/networking/openwrt-ping-test.PNG" style="width:80%; display:block; margin:0; border-radius:8px;"></a></p>
-<p><br></p>
-<hr>
-<p><br></p>
-<h4 id="server-and-workstation-network">Server and Workstation Network</h4>
-<p><br></p>
-<p><strong>Server - eth1</strong></p>
-<pre><code class="language-bash">
-uci set network.lan.device='eth1' 
-uci set network.lan.proto='static' 
-uci set network.lan.ipaddr='10.10.10.1' 
-uci set network.lan.netmask='255.255.255.0'
-
-</code></pre>
-<p><br></p>
-<p><strong>Workstation - eth2</strong></p>
-<pre><code class="language-bash">
-uci set network.workstation='interface' 
-uci set network.workstation.device='eth2' 
-uci set network.workstation.proto='static' 
-uci set network.workstation.ipaddr='10.10.20.1' 
-uci set network.workstation.netmask='255.255.255.0'
-
-</code></pre>
-<p><br></p>
-<p><strong>Commit Changes</strong></p>
-<pre><code class="language-bash">uci commit network
-/etc/init.d/network restart
-
-</code></pre>
-<p><br></p>
-<p><strong>Confirm Changes</strong></p>
-<pre><code class="language-bash">
-ip addr
-
-</code></pre>
-<p><br></p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/networking/openwrt-ipaddr.png" data-desc-position="bottom"><img alt="OpenWRT - Command - ip addr" src="../../../assets/images/networking/openwrt-ipaddr.png" style="width:80%; display:block; margin:0; border-radius:8px;"></a></p>
-<p><br></p>
-<hr>
-<p><br></p><p></p>
+        <p></p>
     </article>
 </section>
             <!-- endblock -->

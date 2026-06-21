@@ -1,11 +1,11 @@
 <!DOCTYPE html><html lang="en" data-bs-theme="dark"><head>
-        <title>Domain Controller Setup - dylanisonline</title>
+        <title>Forest Configuration - dylanisonline</title>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         
-        <link rel="canonical" href="https://dylanisonline.github.io/sections/active-directory/domain-controller/">
+        <link rel="canonical" href="https://dylanisonline.github.io/sections/active-directory/ou-design/">
         <meta name="author" content="Dylan Phan">
 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -114,32 +114,18 @@
                 </div>
             </li>
             <li class="drac-box">
-                <a href="#" class=" active 
-                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover" data-bs-toggle="collapse" data-bs-target="#🖥️-active-directory-collapse" aria-expanded="true">
+                <a href="#" class=" collapsed 
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover" data-bs-toggle="collapse" data-bs-target="#🖥️-active-directory-collapse" aria-expanded="false">
                     🖥️ Active Directory
                 </a>
 
-                <div class="collapse  show " id="🖥️-active-directory-collapse">
+                <div class="collapse " id="🖥️-active-directory-collapse">
                     <ul class="mb-5 drac-list drac-list-none">
                             
     <li class="drac-box-ternary">
-        <a href="./" class=" active 
+        <a href="../dc-setup/" class="
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
             Domain Controller Setup
-        </a>
-    </li>
-                            
-    <li class="drac-box-ternary">
-        <a href="../account-creation/" class="
-            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Account Creation
-        </a>
-    </li>
-                            
-    <li class="drac-box-ternary">
-        <a href="../join-workstations/" class="
-            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Joining Computers
         </a>
     </li>
                     </ul>
@@ -147,31 +133,56 @@
             </li>
             <li class="drac-box">
                 <a href="#" class=" collapsed 
-                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover" data-bs-toggle="collapse" data-bs-target="#👥-ous/groups/gpos-collapse" aria-expanded="false">
-                    👥 OUs/Groups/GPOs
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover" data-bs-toggle="collapse" data-bs-target="#👥-identity-and-access-management-collapse" aria-expanded="false">
+                    👥 Identity and Access Management
                 </a>
 
-                <div class="collapse " id="👥-ous/groups/gpos-collapse">
+                <div class="collapse " id="👥-identity-and-access-management-collapse">
                     <ul class="mb-5 drac-list drac-list-none">
                             
     <li class="drac-box-ternary">
-        <a href="../../groups-and-gpos/ous/" class="
+        <a href="../../iam/iam-ou-design/" class="
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            OUs
+            OU Design
         </a>
     </li>
                             
     <li class="drac-box-ternary">
-        <a href="../../groups-and-gpos/groups/" class="
+        <a href="../../iam/iam-user-accounts/" class="
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Groups
+            User and Admin Accounts
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="#" class=" collapsed 
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover" data-bs-toggle="collapse" data-bs-target="#💻-workstations-collapse" aria-expanded="false">
+                    💻 Workstations
+                </a>
+
+                <div class="collapse " id="💻-workstations-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../workstations/workstation-roles/" class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Workstation Roles
         </a>
     </li>
                             
     <li class="drac-box-ternary">
-        <a href="../../groups-and-gpos/gpos/" class="
+        <a href="../../workstations/workstation-gpos/" class="
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            GPOs
+            Workstation GPOs
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../workstations/workstation-onboarding/" class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Workstation Onboarding
         </a>
     </li>
                     </ul>
@@ -225,20 +236,6 @@
                     <!-- block preview -->
                     <li class="nav-item">
                             
-        <div class="container">
-            <div class="row row-preview">
-                <div class="col">
-                    <a href="../../networking/openwrt-gui/" class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover">
-                        <i class="fa fa-arrow-left"></i> Previous
-                    </a>
-                </div>
-                <div class="col">
-                    <a href="../account-creation/" class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover" style="padding-left: 3%;">
-                        Next <i class="fa fa-arrow-right"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
                     </li>
                     <!--  endblock -->
 
@@ -268,15 +265,9 @@
             <!-- block content -->
                 <section class="p-md-5 section-content">
     <article>
-        <p></p><h1 id="domain-controller-setup">Domain Controller Setup</h1>
+        <p></p><h1 id="forest-configuration">Forest Configuration</h1>
 <p><br></p>
-<p><code>Hostname:</code> Kojima-DC01</p>
-<p><code>IP Address:</code> 10.10.10.10</p>
-<p><code>Windows Version:</code> Windows Server 2022</p>
-<p><br></p>
-<p>Kojima-DC01 serves as the central domain controller for the lab, hosting Active Directory Domain Services (AD DS). It provides centralized authentication and allows domain users, computers, security groups, and other network resources to be managed from a single location.</p>
-<h4 id="virtual-machine-settings">Virtual Machine Settings</h4>
-<h4 id="initial-setup">Initial Setup</h4><p></p>
+<p>To prepare this environment I have to think conceptually about the initial users that I want to create and how they would fit into this environment</p><p></p>
     </article>
 </section>
             <!-- endblock -->
