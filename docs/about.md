@@ -1,3 +1,1 @@
-# Thank you for visiting
-
-### A little bit about me
+### Just a nerd with too much free time

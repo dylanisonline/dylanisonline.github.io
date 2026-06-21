@@ -143,7 +143,7 @@ I opened Active Directory Users and Computers and confirmed that the `kojima.tes
 
 I also confirmed that DNS contained the forward lookup zone and service records created for the domain.
 
-```powershell
+```ps1
 
 Get-ADDomain
 

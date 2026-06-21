@@ -16,13 +16,13 @@ nav:
 #      - Forest Configuration: sections/active-directory/ou-design.md
   - 👥 Identity and Access Management:
       - OU Design: sections/iam/iam-ou-design.md
-      - User and Admin Accounts: sections/iam/iam-user-accounts.md
-  - 💻 Workstations:
-      - Workstation Roles: sections/workstations/workstation-roles.md
-      - Workstation GPOs: sections/workstations/workstation-gpos.md
-      - Workstation Onboarding: sections/workstations/workstation-onboarding.md
-  - 📁 File Server:
-      - File Server Deployment: sections/file-server/file-server.md
+#      - User and Admin Accounts: sections/iam/iam-user-accounts.md
+#  - 💻 Workstations:
+#      - Workstation Roles: sections/workstations/workstation-roles.md
+#      - Workstation GPOs: sections/workstations/workstation-gpos.md
+#      - Workstation Onboarding: sections/workstations/workstation-onboarding.md
+#  - 📁 File Server:
+#      - File Server Deployment: sections/file-server/file-server.md
   - About Me: about.md
 
 theme:
