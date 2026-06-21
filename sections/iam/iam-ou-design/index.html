@@ -146,63 +146,6 @@
             OU Design
         </a>
     </li>
-                            
-    <li class="drac-box-ternary">
-        <a href="../iam-user-accounts/" class="
-            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            User and Admin Accounts
-        </a>
-    </li>
-                    </ul>
-                </div>
-            </li>
-            <li class="drac-box">
-                <a href="#" class=" collapsed 
-                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover" data-bs-toggle="collapse" data-bs-target="#💻-workstations-collapse" aria-expanded="false">
-                    💻 Workstations
-                </a>
-
-                <div class="collapse " id="💻-workstations-collapse">
-                    <ul class="mb-5 drac-list drac-list-none">
-                            
-    <li class="drac-box-ternary">
-        <a href="../../workstations/workstation-roles/" class="
-            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Workstation Roles
-        </a>
-    </li>
-                            
-    <li class="drac-box-ternary">
-        <a href="../../workstations/workstation-gpos/" class="
-            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Workstation GPOs
-        </a>
-    </li>
-                            
-    <li class="drac-box-ternary">
-        <a href="../../workstations/workstation-onboarding/" class="
-            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Workstation Onboarding
-        </a>
-    </li>
-                    </ul>
-                </div>
-            </li>
-            <li class="drac-box">
-                <a href="#" class=" collapsed 
-                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover" data-bs-toggle="collapse" data-bs-target="#📁-file-server-collapse" aria-expanded="false">
-                    📁 File Server
-                </a>
-
-                <div class="collapse " id="📁-file-server-collapse">
-                    <ul class="mb-5 drac-list drac-list-none">
-                            
-    <li class="drac-box-ternary">
-        <a href="../../file-server/file-server/" class="
-            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            File Server Deployment
-        </a>
-    </li>
                     </ul>
                 </div>
             </li>
@@ -244,7 +187,7 @@
                     </a>
                 </div>
                 <div class="col">
-                    <a href="../iam-user-accounts/" class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover" style="padding-left: 3%;">
+                    <a href="../../../about/" class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover" style="padding-left: 3%;">
                         Next <i class="fa fa-arrow-right"></i>
                     </a>
                 </div>
@@ -294,7 +237,6 @@
 </ul>
 <p><br></p>
 <hr>
-<p><br></p>
 <h4 id="final-design">Final Design</h4>
 <p>The completed structure separates identities, computers, roles, and resource-access groups into distinct Organizational Units.</p>
 <p><br></p>
@@ -333,43 +275,100 @@
 </table>
 <p><br></p>
 <hr>
-<p><br></p>
 <h3 id="identity-ous">Identity OUs</h3>
+<p>The identity OUs separate standard employee accounts from privileged administrative accounts.</p>
+<p><br></p>
 <pre><code>
+Kojima 
+├── Kojima Users 
+│   ├── IT (Standard IT User Accounts)
+│   ├── Development (Standard Development User Accounts)
+│   └── Operations (Standard Operations User Accounts)
+|
+└── Kojima Admins 
+    ├── AD Admins (Active Directory administrative Acccounts)
+    ├── Server Admins (Server administrative accounts)
+    └── Workstation Admins (Workstation administrative accounts)
+
 </code></pre>
 <p><br></p>
-<table>
-<thead>
-<tr>
-<th>OU</th>
-<th>Purpose</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Kojima Users</td>
-<td>Contains standard employee accounts</td>
-</tr>
-<tr>
-<td>Kojima Admins</td>
-<td>Contain dedicated privilged accounts</td>
-</tr>
-<tr>
-<td>Kojima Computers</td>
-<td>Contains domain-joined workstations and servers</td>
-</tr>
-<tr>
-<td>Kojima Roles</td>
-<td>Contian Global security groups representing job and administrative roles</td>
-</tr>
-<tr>
-<td>Kojima Resources</td>
-<td>Contain Domain local groups representing permissions and access to resources</td>
-</tr>
-</tbody>
-</table>
+<p>This separation allows standard and privileged accounts to be managed independently. Administrative accounts can later receive stricter Group Policies, logon restrictions, auditing requirements, and privileged-access controls without affecting standard user accounts.</p>
 <p><br></p>
-<hr><p></p>
+<hr>
+<h3 id="computer-ous">Computer OUs</h3>
+<p>The computer OUs separate member servers from end-user workstations.</p>
+<p><br></p>
+<pre><code>Kojima Computers
+├── Kojima Servers       (Domain-joined member servers)
+└── Kojima Workstations  (Domain-joined user endpoints)
+    ├── IT               (IT-assigned workstations)
+    ├── Development      (Developer workstations)
+    └── Operations       (Operations workstations)
+
+</code></pre>
+<p><br></p>
+<p>Servers and workstations are stored separately because they require different security baselines, administrative controls, and Group Policy settings.</p>
+<p>The workstation structure is further divided by department so that policies can be applied only where they are needed.</p>
+<p>For example:</p>
+<ul>
+<li>Development workstations may receive approved local-administrator access and development tooling.</li>
+<li>Operations workstations may receive a more restrictive standard-user configuration.</li>
+<li>IT workstations may receive administrative utilities and support tools.</li>
+</ul>
+<p><br></p>
+<hr>
+<p><br></p>
+<h3 id="roles-ous">Roles OUs</h3>
+<p>The role OUs contain Global security groups that describe what an account does within the organization.</p>
+<p><br></p>
+<pre><code>
+Kojima Roles
+├── Admin Roles          (Domain-joined member servers)
+└── Department Roles     (Domain-joined user endpoints)
+    ├── IT               (IT department role groups)
+    ├── Development      (Development department role groups)
+    └── Operations       (Operations department role groups)
+
+
+</code></pre>
+<p><br></p>
+<p>Department role groups will represent normal organizational membership.</p>
+<p>Examples include:</p>
+<ul>
+<li>GG-Role-IT-Staff</li>
+<li>GG-Role-Development-Staff</li>
+<li>GG-Role-Operations-Staff</li>
+</ul>
+<p>Administrative role groups will represent elevated responsibilities.</p>
+<p>Examples include:</p>
+<ul>
+<li>GG-Role-IT-AD-Administrator</li>
+<li>GG-Role-IT-System-Administrator</li>
+<li>GG-Role-IT-Helpdesk-Analyst</li>
+</ul>
+<p><br></p>
+<hr>
+<p><br></p>
+<h3 id="resource-ous">Resource OUs</h3>
+<p><br></p>
+<pre><code>
+Kojima Resources
+├── Domain Access (Delegated Active Directory permissions)
+├── Computer Access (Workstation, server, and management access)
+└── File Shares (NTFS and share-permission groups)
+
+</code></pre>
+<p><br></p>
+<p>Examples include:</p>
+<ul>
+<li>DL-AD-Password-Reset</li>
+<li>DL-AD-Workstation-Onboarding</li>
+<li>DL-All-Workstations-LocalAdmins</li>
+<li>DL-FS01-Operations-Modify</li>
+</ul>
+<p><br></p>
+<hr>
+<p><br></p><p></p>
     </article>
 </section>
             <!-- endblock -->
