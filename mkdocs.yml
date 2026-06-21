@@ -12,13 +12,15 @@ nav:
       - OpenWRT Web GUI: sections/networking/openwrt-gui.md
   - 🖥️ Active Directory:
 #      - Overview: sections/active-directory/overview.md
-      - Domain Controller Setup: sections/active-directory/domain-controller.md
-      - Account Creation: sections/active-directory/account-creation.md
-      - Joining Computers: sections/active-directory/join-workstations.md
-  - 👥 OUs/Groups/GPOs:
-      - OUs: sections/groups-and-gpos/ous.md
-      - Groups: sections/groups-and-gpos/groups.md
-      - GPOs: sections/groups-and-gpos/gpos.md
+      - Domain Controller Setup: sections/active-directory/dc-setup.md
+#      - Forest Configuration: sections/active-directory/ou-design.md
+  - 👥 Identity and Access Management:
+      - OU Design: sections/iam/iam-ou-design.md
+      - User and Admin Accounts: sections/iam/iam-user-accounts.md
+  - 💻 Workstations:
+      - Workstation Roles: sections/workstations/workstation-roles.md
+      - Workstation GPOs: sections/workstations/workstation-gpos.md
+      - Workstation Onboarding: sections/workstations/workstation-onboarding.md
   - 📁 File Server:
       - File Server Deployment: sections/file-server/file-server.md
   - About Me: about.md

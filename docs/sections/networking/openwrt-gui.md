@@ -34,20 +34,10 @@ To access the web gui, I used firefox and entered the gateway address above. By 
 
 <br>
 
-### Configuring Interfaces
-
+#### Configuring Interfaces and DHCP
 <br>
 
-**Verifying Network Interfaces**
-
-Network -> Interfaces
-
-![Web GUI Interfaces](../../assets/images/networking/openwrt-interfaces.png){ style="width:40%; display:block; margin:0 ; border-radius:8px;" }
-
-<br>
-
-#### Configuring DHCP
-<br>
+Lan Interface -> Edit -> DHCP Server
 
 Disabling DHCP on server network (LAN Interface)
 
@@ -56,6 +46,8 @@ Disabling DHCP on server network (LAN Interface)
 <br>
 
 **Enabling DHCP on workstation network (workstation interface)**
+
+Workstation Interface -> Edit -> DHCP Server
 
 Configuring these settings will allow our workstation network to give hosts IP address automatically with a range from `10.10.20.100 - 199`
 
@@ -76,7 +68,11 @@ Assigning the interface to the lan zone allowed DHCP traffic from the workstatio
 
 <br>
 
-**Verifying Adressing on both Networks**
+---
+
+<br>
+
+### Verifying Addressing on both Networks
 
 `Note:` *For context, I had a Fedora Workstation Virtual machine that I had to test DHCP connectivity.*
 
