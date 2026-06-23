@@ -1,5 +1,5 @@
 <!DOCTYPE html><html lang="en" data-bs-theme="dark"><head>
-        <title>Iam user accounts - dylanisonline</title>
+        <title>Account Creation - dylanisonline</title>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -132,18 +132,25 @@
                 </div>
             </li>
             <li class="drac-box">
-                <a href="#" class=" collapsed 
-                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover" data-bs-toggle="collapse" data-bs-target="#👥-identity-and-access-management-collapse" aria-expanded="false">
+                <a href="#" class=" active 
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover" data-bs-toggle="collapse" data-bs-target="#👥-identity-and-access-management-collapse" aria-expanded="true">
                     👥 Identity and Access Management
                 </a>
 
-                <div class="collapse " id="👥-identity-and-access-management-collapse">
+                <div class="collapse  show " id="👥-identity-and-access-management-collapse">
                     <ul class="mb-5 drac-list drac-list-none">
                             
     <li class="drac-box-ternary">
         <a href="../iam-ou-design/" class="
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
             OU Design
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="./" class=" active 
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Account Creation
         </a>
     </li>
                     </ul>
@@ -179,6 +186,20 @@
                     <!-- block preview -->
                     <li class="nav-item">
                             
+        <div class="container">
+            <div class="row row-preview">
+                <div class="col">
+                    <a href="../iam-ou-design/" class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover">
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="../../../about/" class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover" style="padding-left: 3%;">
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
                     </li>
                     <!--  endblock -->
 
@@ -208,7 +229,119 @@
             <!-- block content -->
                 <section class="p-md-5 section-content">
     <article>
-        <p></p>
+        <p></p><h1 id="user-accounts">User Accounts</h1>
+<p><br></p>
+<p>To begin the account-provisioning process, the lab will focus on a single user: Huey “Hal” Emmerich.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/iam/hall.jpg" data-desc-position="bottom"><img alt="Hal Emmerich - Powershell Validation" src="../../../assets/images/iam/hall.jpg" style="width:20%; display:block; margin:0 ; border-radius:8px;"></a></p>
+<p><br></p>
+<p>Within the Metal Gear universe, Hal Emmerich is best known as a highly skilled engineer and technology specialist. In the context of this lab, he will serve as a Senior Systems Engineer within the IT department.</p>
+<p>Because this role requires access to multiple systems and administrative functions, Hal will be assigned a standard user account for everyday work alongside separate privileged accounts for workstation, server, and domain-level administration. This approach supports role-based access control while maintaining a clear separation between routine tasks and elevated responsibilities.</p>
+<p><br></p>
+<p><strong>Account:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Username</th>
+<th>OU</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>hal.emmerich</td>
+<td>Kojima Users/IT</td>
+<td>Used for day to day activities (web browsing, working on files, etc.)</td>
+</tr>
+<tr>
+<td>hemmerich-ws</td>
+<td>Kojima Admins/Workstation Admins</td>
+<td>Used for local administrator actions on workstations</td>
+</tr>
+<tr>
+<td>hemmerich-sa</td>
+<td>Kojima Admins/Server Admins</td>
+<td>Used for server administrative activities</td>
+</tr>
+<tr>
+<td>hemmerich-da</td>
+<td>Kojima Admins/Domain Admins</td>
+<td>Used for domain administrative actions (creating users, resetting passwords, etc.)</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<hr>
+<p><br></p>
+<h3 id="account-creation">Account Creation</h3>
+<p>Each account for Huey was created manually through <strong>Active Directory Users and Computers</strong> and placed in the Organizational Unit that corresponds with its intended purpose. Although users can also be created via Powershell:</p>
+<p><br></p>
+<p><strong>Powershell:</strong></p>
+<pre><code>
+Import-Module ActiveDirectory
+
+$Password = Read-Host "Enter a temporary password" -AsSecureString
+
+try {
+    New-ADUser `
+        -Name "IT Test" `
+        -GivenName "IT" `
+        -Surname "Test" `
+        -DisplayName "IT Test" `
+        -SamAccountName "it.test" `
+        -UserPrincipalName "it.test@kojima.test" `
+        -Title "IT Test User" `
+        -Department "IT" `
+        -Description "IT Test User" `
+        -Path "OU=IT,OU=Kojima Users,OU=Kojima,DC=kojima,DC=test" `
+        -AccountPassword $Password `
+        -ChangePasswordAtLogon $true `
+        -Enabled $true `
+        -ErrorAction Stop
+
+    Write-Host "User account 'it.test' created successfully." -ForegroundColor Green
+}
+catch {
+    Write-Host "User account creation failed: $($_.Exception.Message)" -ForegroundColor Red
+}
+
+</code></pre>
+<p><br></p>
+<p><strong>Powershell ISE:</strong></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/iam/ps-ise.png" data-desc-position="bottom"><img alt="Hal Emmerich - Powershell Validation" src="../../../assets/images/iam/ps-ise.png" style="width:60%; display:block; margin:0 ; border-radius:8px;"></a></p>
+<p><br></p>
+<p><strong>Verifying in Active Directory Computers and Users:</strong></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/iam/ad-it-test.png" data-desc-position="bottom"><img alt="Hal Emmerich - Powershell Validation" src="../../../assets/images/iam/ad-it-test.png" style="width:60%; display:block; margin:0 ; border-radius:8px;"></a></p>
+<p><br></p>
+<p>The standard account was placed within the IT department under the <code>Kojima Users</code> OU, while the administrative accounts were separated into dedicated OUs beneath <code>Kojima Admins</code>.</p>
+<p>At this stage, the accounts have only been created and organized. Their permissions will be assigned later through security groups, Group Policy, and delegated Active Directory permissions.</p>
+<p><br></p>
+<hr>
+<p><br></p>
+<h3 id="validation">Validation</h3>
+<p><br></p>
+<p><strong>Powershell Command:</strong></p>
+<pre><code>
+Get-ADUser -Filter {
+    SamAccountName -eq "hal.emmerich" -or
+    SamAccountName -like "hemmerich-*"
+} -Properties Description |
+Select-Object `
+    Name,
+    SamAccountName,
+    Description,
+    @{Name="OU"; Expression={
+        if ($_.DistinguishedName -match ',OU=([^,]+)') {
+            $Matches[1]
+        }
+    }} |
+Sort-Object SamAccountName |
+Format-Table -AutoSize -Wrap
+
+</code></pre>
+<p><br></p>
+<p><strong>Powershell Command:</strong></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/iam/account-powershell.png" data-desc-position="bottom"><img alt="Hal Emmerich - Powershell Validation" src="../../../assets/images/iam/account-powershell.png" style="width:60%; display:block; margin:0 ; border-radius:8px;"></a></p>
+<p><br></p><p></p>
     </article>
 </section>
             <!-- endblock -->
