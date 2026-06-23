@@ -1,11 +1,11 @@
 <!DOCTYPE html><html lang="en" data-bs-theme="dark"><head>
-        <title>Domain Controller Setup - dylanisonline</title>
+        <title>Domain Administrator - dylanisonline</title>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         
-        <link rel="canonical" href="https://dylanisonline.github.io/sections/active-directory/dc-setup/">
+        <link rel="canonical" href="https://dylanisonline.github.io/sections/iam/3-iam-domain-admin/">
         <meta name="author" content="Dylan Phan">
 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -114,16 +114,16 @@
                 </div>
             </li>
             <li class="drac-box">
-                <a href="#" class=" active 
-                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover" data-bs-toggle="collapse" data-bs-target="#🖥️-active-directory-collapse" aria-expanded="true">
+                <a href="#" class=" collapsed 
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover" data-bs-toggle="collapse" data-bs-target="#🖥️-active-directory-collapse" aria-expanded="false">
                     🖥️ Active Directory
                 </a>
 
-                <div class="collapse  show " id="🖥️-active-directory-collapse">
+                <div class="collapse " id="🖥️-active-directory-collapse">
                     <ul class="mb-5 drac-list drac-list-none">
                             
     <li class="drac-box-ternary">
-        <a href="./" class=" active 
+        <a href="../../active-directory/dc-setup/" class="
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
             Domain Controller Setup
         </a>
@@ -132,30 +132,30 @@
                 </div>
             </li>
             <li class="drac-box">
-                <a href="#" class=" collapsed 
-                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover" data-bs-toggle="collapse" data-bs-target="#👥-identity-and-access-management-collapse" aria-expanded="false">
+                <a href="#" class=" active 
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover" data-bs-toggle="collapse" data-bs-target="#👥-identity-and-access-management-collapse" aria-expanded="true">
                     👥 Identity and Access Management
                 </a>
 
-                <div class="collapse " id="👥-identity-and-access-management-collapse">
+                <div class="collapse  show " id="👥-identity-and-access-management-collapse">
                     <ul class="mb-5 drac-list drac-list-none">
                             
     <li class="drac-box-ternary">
-        <a href="../../iam/1-iam-ou-design/" class="
+        <a href="../1-iam-ou-design/" class="
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
             OU Design
         </a>
     </li>
                             
     <li class="drac-box-ternary">
-        <a href="../../iam/2-iam-user-accounts/" class="
+        <a href="../2-iam-user-accounts/" class="
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
             Account Creation
         </a>
     </li>
                             
     <li class="drac-box-ternary">
-        <a href="../../iam/3-iam-domain-admin/" class="
+        <a href="./" class=" active 
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
             Domain Administrator
         </a>
@@ -196,12 +196,12 @@
         <div class="container">
             <div class="row row-preview">
                 <div class="col">
-                    <a href="../../networking/openwrt-gui/" class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover">
+                    <a href="../2-iam-user-accounts/" class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover">
                         <i class="fa fa-arrow-left"></i> Previous
                     </a>
                 </div>
                 <div class="col">
-                    <a href="../../iam/1-iam-ou-design/" class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover" style="padding-left: 3%;">
+                    <a href="../../../about/" class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover" style="padding-left: 3%;">
                         Next <i class="fa fa-arrow-right"></i>
                     </a>
                 </div>
@@ -236,125 +236,226 @@
             <!-- block content -->
                 <section class="p-md-5 section-content">
     <article>
-        <p></p><h1 id="domain-controller-setup">Domain Controller Setup</h1>
+        <p></p><h1 id="domain-administrator-account">Domain Administrator Account</h1>
 <p><br></p>
-<p><code>Hostname:</code> Kojima-DC01</p>
-<p><code>IP Address:</code> 10.10.10.10</p>
-<p><code>Windows Version:</code> Windows Server 2022 (Desktop Experience)</p>
-<p><br></p>
-<p>Kojima-DC01 serves as the central domain controller for the lab, hosting Active Directory Domain Services (AD DS). It provides centralized authentication and allows domain users, computers, security groups, and other network resources to be managed from a single location.</p>
-<p><br></p>
-<hr>
-<p><br></p>
-<h3 id="virtual-machine-settings">Virtual Machine Settings</h3>
-<p><br></p>
-<p>To keep the lab lightweight while maintaining reliable performance, the domain controller’s virtual hardware is configured with only the resources necessary to support its core services.</p>
+<p><code>Account:</code> hemmerich-da</p>
+<p><code>Permissions:</code></p>
 <ul>
-<li>
-<p><code>Processors:</code> 2 Cores</p>
-</li>
-<li>
-<p><code>Memory:</code> 2 Gigabytes</p>
-</li>
-<li>
-<p><code>Hard Disk:</code> 60 Gigabytes</p>
-</li>
-<li>
-<p><code>Network Adapter:</code> AD-SERVERNET</p>
-</li>
+<li>Create and manage users</li>
+<li>Join Computers to Domain</li>
+<li>Reset Passwords</li>
+<li>Create GPOs</li>
 </ul>
 <p><br></p>
 <hr>
 <p><br></p>
-<h3 id="ipv4-address-configuration">IPv4 Address Configuration</h3>
+<h3 id="global-groups-roles">Global Groups (Roles)</h3>
 <p><br></p>
-<p>Network &amp; Internet Settings -&gt; Change Adapter options -&gt; Ethernet0 -&gt; Properties -&gt; Internet Protocol Version 4</p>
-<p><code>IP Address:</code> 10.10.10.10</p>
-<p><code>Subnet Mask:</code> 255.255.255.0</p>
-<p><code>Default Gateway:</code> 10.10.10.1</p>
-<p><code>Preferred DNS Server:</code> 10.10.10.10</p>
-<p><br></p>
-<p><em>For installing initial Windows Updates, the preferred DNS will point to the gateway but once DNS is configured to the DC then it will change to 10.10.10.10</em></p>
-<p><br></p>
-<hr>
-<p><br></p>
-<h4 id="installing-active-directory-domain-services-ad-ds">Installing Active Directory Domain Services (AD DS)</h4>
-<p><br></p>
-<p><strong>Validating Settings</strong></p>
-<p>Before installing Active Directory Domain Services, I verified the server's hostname and network configuration using:</p>
-<pre><code class="language-powershell">
-hostname
-ipconfig /all
-
-</code></pre>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/active-directory/domain-controller/dc-cmd.png" data-desc-position="bottom"><img alt="Verifying IP Address " src="../../../assets/images/active-directory/domain-controller/dc-cmd.png" style="width:40%; display:block; margin:0 ; border-radius:8px;"></a></p>
-<p><br></p>
-<p><strong>Installing AD DS</strong></p>
-<p>Using Server Manager, I installed the Active Directory Domain Services server role.</p>
-<p><br></p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/active-directory/domain-controller/dc-ADDS-install.png" data-desc-position="bottom"><img alt="Installing AD DS part 1" src="../../../assets/images/active-directory/domain-controller/dc-ADDS-install.png" style="width:40%; display:block; margin:0 ; border-radius:8px;"></a></p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/active-directory/domain-controller/dc-ADDS-install2.png" data-desc-position="bottom"><img alt="Installing AD DS part 2" src="../../../assets/images/active-directory/domain-controller/dc-ADDS-install2.png" style="width:40%; display:block; margin:0 ; border-radius:8px;"></a></p>
-<p><br></p>
-<hr>
-<p><br></p>
-<h4 id="promoting-server-to-domain-controller">Promoting server to Domain Controller</h4>
-<p><br></p>
+<p>All of these roles will be housed in the <code>Kojima Roles/Admin Roles</code></p>
 <table>
 <thead>
 <tr>
-<th>Setting</th>
-<th>Configuration</th>
+<th>Name</th>
+<th>Permissions</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Server</td>
-<td>KOJIMA-DC01</td>
+<td>Kojima-GG-User-Management</td>
+<td>Add, Delete, Manage users and user passwords in Active directory</td>
 </tr>
 <tr>
-<td>Domain</td>
-<td>kojima.test</td>
+<td>Kojima-GG-Computer-Management</td>
+<td>Add, remove, and manage computer objects in Active directory</td>
 </tr>
 <tr>
-<td>Deployment Type</td>
-<td>New Forest</td>
-</tr>
-<tr>
-<td>DNS Server</td>
-<td>Installed Automatically</td>
-</tr>
-<tr>
-<td>Global Catalog</td>
-<td>Enabled</td>
-</tr>
-<tr>
-<td>Read-Only Domain Controller</td>
-<td>Disabled</td>
+<td>Kojima-GG-GPO-Management</td>
+<td>Add, delete, and edit Group Policy Objects</td>
 </tr>
 </tbody>
 </table>
 <p><br></p>
-<p>DNS was installed alongside Active Directory because domain clients rely on DNS service records to locate domain controllers and other domain services.</p>
-<p>The Global Catalog option was also enabled because this server would be the first and primary domain controller in the environment.</p>
+<p>The <code>Kojima-GG-User-Management</code> global group was created manually via the Active Directory Users and Computers, but roles can also be created using Powershell.</p>
+<p><strong>Creating global groups with Powershell:</strong></p>
+<p>Powershell ISE:</p>
+<pre><code>
+Import-Module ActiveDirectory
+
+try {
+    New-ADGroup `
+        -Name "Kojima-GG-Computer-Management" `
+        -SamAccountName "Kojima-GG-Computer-Management" `
+        -GroupCategory Security `
+        -GroupScope Global `
+        -Path "OU=Admin Roles,OU=Kojima Roles,OU=Kojima,DC=kojima,DC=test" `
+        -Description "Role Group - Computer Management"
+
+    New-ADGroup `
+        -Name "Kojima-GG-GPO-Management" `
+        -SamAccountName "Kojima-GG-GPO-Management" `
+        -GroupCategory Security `
+        -GroupScope Global `
+        -Path "OU=Admin Roles,OU=Kojima Roles,OU=Kojima,DC=kojima,DC=test" `
+        -Description "Role Group - Managing GPOs"
+
+    Write-Host "Groups Created." -ForegroundColor Green
+}
+catch {
+    Write-Host "Groups failed to be created" -ForegroundColor Red
+    Write-Host "Error: $($_.Exception.Message)" -ForegroundColor Yellow
+}
+
+
+</code></pre>
 <p><br></p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/active-directory/domain-controller/dc-ad-install-success.png" data-desc-position="bottom"><img alt="Install successful" src="../../../assets/images/active-directory/domain-controller/dc-ad-install-success.png" style="width:40%; display:block; margin:0 ; border-radius:8px;"></a></p>
+<p><strong>Verifying Group Creation:</strong></p>
+<pre><code>
+Get-ADGroup -Filter 'Name -like "Kojima-GG-*"' |
+Select-Object Name, SamAccountName, GroupScope, GroupCategory, DistinguishedName |
+Sort-Object Name
+
+</code></pre>
+<p><br></p>
+<p><strong>Output:</strong></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/iam/ps-groups-1.png" data-desc-position="bottom"><img alt="Global Group creation verification - Powershell ISE" src="../../../assets/images/iam/ps-groups-1.png" style="width:60%; display:block; margin:0 ; border-radius:8px;"></a></p>
 <p><br></p>
 <hr>
 <p><br></p>
-<h3 id="validation">Validation</h3>
+<h3 id="domain-local-groups">Domain Local Groups</h3>
 <p><br></p>
-<p>I opened Active Directory Users and Computers and confirmed that the <code>kojima.test</code> domain and its default containers were available</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/active-directory/domain-controller/ad-forest-default.png" data-desc-position="bottom"><img alt="Install successful" src="../../../assets/images/active-directory/domain-controller/ad-forest-default.png" style="width:40%; display:block; margin:0 ; border-radius:8px;"></a></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Permissions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Kojima-DL-User-Manage</td>
+<td>Grants delegated permission to create, modify, disable, delete, and reset passwords for user accounts within the Kojima Users OU</td>
+</tr>
+<tr>
+<td>Kojima-DL-Computer-Manage</td>
+<td>Grants delegated permission to create, modify, move, disable, reset, and delete computer objects within the Kojima Computers OU</td>
+</tr>
+<tr>
+<td>Kojima-DL-GPO-Manage</td>
+<td>Grants permission to create and manage approved Group Policy Objects and link them to authorized Organizational Units</td>
+</tr>
+</tbody>
+</table>
 <p><br></p>
-<p>I also confirmed that DNS contained the forward lookup zone and service records created for the domain.</p>
-<pre><code class="language-ps1">
-Get-ADDomain
+<p><strong>Creating domain local groups with Powershell:</strong></p>
+<p><em>The script is virtually the same as the Global Group's except there were changes made to point the groups to</em> <code>Kojima Resources/Domain Access</code></p>
+<pre><code>
+Import-Module ActiveDirectory
+
+$GroupPath = "OU=Domain Access,OU=Kojima Resources,OU=Kojima,DC=kojima,DC=test"
+
+try {
+    New-ADGroup `
+        -Name "Kojima-DL-Users-Manage" `
+        -SamAccountName "Kojima-DL-Users-Manage" `
+        -GroupCategory Security `
+        -GroupScope DomainLocal `
+        -Path $GroupPath `
+        -Description "Permission group for managing users in the Kojima Users OU" `
+        -ErrorAction Stop
+
+    New-ADGroup `
+        -Name "Kojima-DL-Computers-Manage" `
+        -SamAccountName "Kojima-DL-Computers-Manage" `
+        -GroupCategory Security `
+        -GroupScope DomainLocal `
+        -Path $GroupPath `
+        -Description "Permission group for managing computers in the Kojima Computers OU" `
+        -ErrorAction Stop
+
+    New-ADGroup `
+        -Name "Kojima-DL-GPO-Manage" `
+        -SamAccountName "Kojima-DL-GPO-Manage" `
+        -GroupCategory Security `
+        -GroupScope DomainLocal `
+        -Path $GroupPath `
+        -Description "Permission group for managing approved Group Policy Objects" `
+        -ErrorAction Stop
+
+    Write-Host "Domain-local permission groups created successfully." -ForegroundColor Green
+}
+catch {
+    Write-Host "Group creation failed." -ForegroundColor Red
+    Write-Host $_.Exception.Message -ForegroundColor Yellow
+}
 
 </code></pre>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/active-directory/domain-controller/get-addomain.png" data-desc-position="bottom"><img alt="Install successful" src="../../../assets/images/active-directory/domain-controller/get-addomain.png" style="width:40%; display:block; margin:0 ; border-radius:8px;"></a></p>
 <p><br></p>
-<p>KOJIMA-DC01 was successfully promoted as the first domain controller and DNS server for the kojima.test forest.</p>
-<p>With the domain services operational, I could begin designing the organizational unit structure, creating users and security groups, and joining the first workstation to the domain.</p><p></p>
+<p><strong>Verifying Domain Local Group Creation:</strong></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/iam/ps-groups-1.png" data-desc-position="bottom"><img alt="Global Group creation verification - Powershell ISE" src="../../../assets/images/iam/ps-groups-1.png" style="width:60%; display:block; margin:0 ; border-radius:8px;"></a></p>
+<p><br></p>
+<hr>
+<p><br></p>
+<h3 id="nesting-groups">Nesting Groups</h3>
+<p>For our next step, we will nest the domain local groups with their corresponding global group</p>
+<pre><code>
+Add-ADGroupMember `
+    -Identity "Kojima-DL-Users-Manage" `
+    -Members "Kojima-GG-User-Management"
+
+Add-ADGroupMember `
+    -Identity "Kojima-DL-Computers-Manage" `
+    -Members "Kojima-GG-Computer-Management"
+
+Add-ADGroupMember `
+    -Identity "Kojima-DL-GPO-Manage" `
+    -Members "Kojima-GG-GPO-Management"
+
+</code></pre>
+<p><br></p>
+<p><strong>PowerShell ISE:</strong></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/iam/ps-group-nest.png" data-desc-position="bottom"><img alt="Global Group creation verification - Powershell ISE" src="../../../assets/images/iam/ps-group-nest.png" style="width:60%; display:block; margin:0 ; border-radius:8px;"></a></p>
+<p><br></p>
+<p><strong>Validating via PowerShell:</strong></p>
+<pre><code>
+Get-ADPrincipalGroupMembership "Kojima-GG-User-Management" |
+Select-Object Name, GroupScope, GroupCategory
+
+Get-ADPrincipalGroupMembership "Kojima-GG-Computer-Management" |
+Select-Object Name, GroupScope, GroupCategory
+
+Get-ADPrincipalGroupMembership "Kojima-GG-GPO-Management" |
+Select-Object Name, GroupScope, GroupCategory
+
+</code></pre>
+<p><br></p>
+<p><strong>PowerShell ISE:</strong></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/iam/ps-group-nest-verify.png" data-desc-position="bottom"><img alt="Global Group creation verification - Powershell ISE" src="../../../assets/images/iam/ps-group-nest-verify.png" style="width:60%; display:block; margin:0 ; border-radius:8px;"></a></p>
+<p><br></p>
+<hr>
+<p><br></p>
+<h3 id="user-management">User Management</h3>
+<p><br></p>
+<p><strong>Adding <code>hemmerich-da</code> to User Management Global Group</strong></p>
+<pre><code>
+Add-ADGroupMember `
+    -Identity "Kojima-GG-User-Management" `
+    -Members "hemmerich-da"
+
+</code></pre>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/iam/ps-adgroup.png" data-desc-position="bottom"><img alt="Global Group creation verification - Powershell ISE" src="../../../assets/images/iam/ps-adgroup.png" style="width:60%; display:block; margin:0 ; border-radius:8px;"></a></p>
+<p><br></p>
+<p><strong>Delegating Control</strong></p>
+<p>Active Directory Users and Computers -&gt; Right-Click <code>Kojima Users</code> -&gt; Delegate Control</p>
+<p><br></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/iam/ad-user-delegate.png" data-desc-position="bottom"><img alt="Global Group creation verification - Powershell ISE" src="../../../assets/images/iam/ad-user-delegate.png" style="width:60%; display:block; margin:0 ; border-radius:8px;"></a></p>
+<p><br></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/iam/ad-user-delegate2.png" data-desc-position="bottom"><img alt="Global Group creation verification - Powershell ISE" src="../../../assets/images/iam/ad-user-delegate2.png" style="width:60%; display:block; margin:0 ; border-radius:8px;"></a></p>
+<p><br></p>
+<hr>
+<p><br></p>
+<h3 id="group-and-ou-management">Group and OU management</h3>
+<p><br></p>
+<hr><p></p>
     </article>
 </section>
             <!-- endblock -->

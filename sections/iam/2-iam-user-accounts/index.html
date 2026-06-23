@@ -1,11 +1,11 @@
 <!DOCTYPE html><html lang="en" data-bs-theme="dark"><head>
-        <title>OU Design - dylanisonline</title>
+        <title>Account Creation - dylanisonline</title>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         
-        <link rel="canonical" href="https://dylanisonline.github.io/sections/iam/iam-ou-design/">
+        <link rel="canonical" href="https://dylanisonline.github.io/sections/iam/2-iam-user-accounts/">
         <meta name="author" content="Dylan Phan">
 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -141,16 +141,23 @@
                     <ul class="mb-5 drac-list drac-list-none">
                             
     <li class="drac-box-ternary">
-        <a href="./" class=" active 
+        <a href="../1-iam-ou-design/" class="
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
             OU Design
         </a>
     </li>
                             
     <li class="drac-box-ternary">
-        <a href="../iam-user-accounts/" class="
+        <a href="./" class=" active 
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
             Account Creation
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../3-iam-domain-admin/" class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Domain Administrator
         </a>
     </li>
                     </ul>
@@ -189,12 +196,12 @@
         <div class="container">
             <div class="row row-preview">
                 <div class="col">
-                    <a href="../../active-directory/dc-setup/" class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover">
+                    <a href="../1-iam-ou-design/" class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover">
                         <i class="fa fa-arrow-left"></i> Previous
                     </a>
                 </div>
                 <div class="col">
-                    <a href="../iam-user-accounts/" class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover" style="padding-left: 3%;">
+                    <a href="../3-iam-domain-admin/" class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover" style="padding-left: 3%;">
                         Next <i class="fa fa-arrow-right"></i>
                     </a>
                 </div>
@@ -229,152 +236,118 @@
             <!-- block content -->
                 <section class="p-md-5 section-content">
     <article>
-        <p></p><h1 id="organizational-unit-design">Organizational Unit Design</h1>
+        <p></p><h1 id="user-accounts">User Accounts</h1>
 <p><br></p>
-<p>Before creating users, security groups, and administrative permissions, I first designed an Organizational Unit structure for the kojima.test domain.</p>
+<p>To begin the account-provisioning process, the lab will focus on a single user: Huey “Hal” Emmerich.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/iam/hall.jpg" data-desc-position="bottom"><img alt="Hal Emmerich - Powershell Validation" src="../../../assets/images/iam/hall.jpg" style="width:20%; display:block; margin:0 ; border-radius:8px;"></a></p>
 <p><br></p>
-<p>The goal was to create a structure that would support:</p>
-<ul>
-<li>Clear separation between standard and privileged accounts</li>
-<li>Role-based access control</li>
-<li>Delegated Active Directory administration</li>
-<li>Targeted Group Policy application</li>
-<li>Department-specific workstation management</li>
-<li>Future expansion of the environment</li>
-</ul>
+<p>Within the Metal Gear universe, Hal Emmerich is best known as a highly skilled engineer and technology specialist. In the context of this lab, he will serve as a Senior Systems Engineer within the IT department.</p>
+<p>Because this role requires access to multiple systems and administrative functions, Hal will be assigned a standard user account for everyday work alongside separate privileged accounts for workstation, server, and domain-level administration. This approach supports role-based access control while maintaining a clear separation between routine tasks and elevated responsibilities.</p>
 <p><br></p>
-<hr>
-<h4 id="final-design">Final Design</h4>
-<p>The completed structure separates identities, computers, roles, and resource-access groups into distinct Organizational Units.</p>
-<p><br></p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/iam/ou-structure.png" data-desc-position="bottom"><img alt="kojima.test domain OU structure" src="../../../assets/images/iam/ou-structure.png" style="width:60%; display:block; margin:0 ; border-radius:8px;"></a></p>
-<p><br></p>
-<p><strong>Top Level OUs:</strong></p>
+<p><strong>Account:</strong></p>
 <table>
 <thead>
 <tr>
+<th>Username</th>
 <th>OU</th>
-<th>Purpose</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Kojima Users</td>
-<td>Contains standard employee accounts</td>
+<td>hal.emmerich</td>
+<td>Kojima Users/IT</td>
+<td>Used for day to day activities (web browsing, working on files, etc.)</td>
 </tr>
 <tr>
-<td>Kojima Admins</td>
-<td>Contain dedicated privilged accounts</td>
+<td>hemmerich-ws</td>
+<td>Kojima Admins/Workstation Admins</td>
+<td>Used for local administrator actions on workstations</td>
 </tr>
 <tr>
-<td>Kojima Computers</td>
-<td>Contains domain-joined workstations and servers</td>
+<td>hemmerich-sa</td>
+<td>Kojima Admins/Server Admins</td>
+<td>Used for server administrative activities</td>
 </tr>
 <tr>
-<td>Kojima Roles</td>
-<td>Contian Global security groups representing job and administrative roles</td>
-</tr>
-<tr>
-<td>Kojima Resources</td>
-<td>Contain Domain local groups representing permissions and access to resources</td>
+<td>hemmerich-da</td>
+<td>Kojima Admins/Domain Admins</td>
+<td>Used for domain administrative actions (creating users, resetting passwords, etc.)</td>
 </tr>
 </tbody>
 </table>
 <p><br></p>
 <hr>
-<h3 id="identity-ous">Identity OUs</h3>
-<p>The identity OUs separate standard employee accounts from privileged administrative accounts.</p>
 <p><br></p>
+<h3 id="account-creation">Account Creation</h3>
+<p>Each account for Huey was created manually through <strong>Active Directory Users and Computers</strong> and placed in the Organizational Unit that corresponds with its intended purpose. Although users can also be created via Powershell:</p>
+<p><br></p>
+<p><strong>Powershell:</strong></p>
 <pre><code>
-Kojima 
-├── Kojima Users 
-│   ├── IT (Standard IT User Accounts)
-│   ├── Development (Standard Development User Accounts)
-│   └── Operations (Standard Operations User Accounts)
-|
-└── Kojima Admins 
-    ├── AD Admins (Active Directory administrative Acccounts)
-    ├── Server Admins (Server administrative accounts)
-    └── Workstation Admins (Workstation administrative accounts)
+Import-Module ActiveDirectory
+
+$Password = Read-Host "Enter a temporary password" -AsSecureString
+
+try {
+    New-ADUser `
+        -Name "IT Test" `
+        -GivenName "IT" `
+        -Surname "Test" `
+        -DisplayName "IT Test" `
+        -SamAccountName "it.test" `
+        -UserPrincipalName "it.test@kojima.test" `
+        -Title "IT Test User" `
+        -Department "IT" `
+        -Description "IT Test User" `
+        -Path "OU=IT,OU=Kojima Users,OU=Kojima,DC=kojima,DC=test" `
+        -AccountPassword $Password `
+        -ChangePasswordAtLogon $true `
+        -Enabled $true `
+        -ErrorAction Stop
+
+    Write-Host "User account 'it.test' created successfully." -ForegroundColor Green
+}
+catch {
+    Write-Host "User account creation failed: $($_.Exception.Message)" -ForegroundColor Red
+}
 
 </code></pre>
 <p><br></p>
-<p>This separation allows standard and privileged accounts to be managed independently. Administrative accounts can later receive stricter Group Policies, logon restrictions, auditing requirements, and privileged-access controls without affecting standard user accounts.</p>
+<p><strong>Powershell ISE:</strong></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/iam/ps-ise.png" data-desc-position="bottom"><img alt="Hal Emmerich - Powershell Validation" src="../../../assets/images/iam/ps-ise.png" style="width:60%; display:block; margin:0 ; border-radius:8px;"></a></p>
 <p><br></p>
-<hr>
-<h3 id="computer-ous">Computer OUs</h3>
-<p>The computer OUs separate member servers from end-user workstations.</p>
+<p><strong>Verifying in Active Directory Computers and Users:</strong></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/iam/ad-it-test.png" data-desc-position="bottom"><img alt="Hal Emmerich - Powershell Validation" src="../../../assets/images/iam/ad-it-test.png" style="width:60%; display:block; margin:0 ; border-radius:8px;"></a></p>
 <p><br></p>
-<pre><code>Kojima Computers
-├── Kojima Servers       (Domain-joined member servers)
-└── Kojima Workstations  (Domain-joined user endpoints)
-    ├── IT               (IT-assigned workstations)
-    ├── Development      (Developer workstations)
-    └── Operations       (Operations workstations)
-
-</code></pre>
-<p><br></p>
-<p>Servers and workstations are stored separately because they require different security baselines, administrative controls, and Group Policy settings.</p>
-<p>The workstation structure is further divided by department so that policies can be applied only where they are needed.</p>
-<p>For example:</p>
-<ul>
-<li>Development workstations may receive approved local-administrator access and development tooling.</li>
-<li>Operations workstations may receive a more restrictive standard-user configuration.</li>
-<li>IT workstations may receive administrative utilities and support tools.</li>
-</ul>
+<p>The standard account was placed within the IT department under the <code>Kojima Users</code> OU, while the administrative accounts were separated into dedicated OUs beneath <code>Kojima Admins</code>.</p>
+<p>At this stage, the accounts have only been created and organized. Their permissions will be assigned later through security groups, Group Policy, and delegated Active Directory permissions.</p>
 <p><br></p>
 <hr>
 <p><br></p>
-<h3 id="roles-ous">Roles OUs</h3>
-<p>The role OUs contain Global security groups that describe what an account does within the organization.</p>
+<h3 id="validation">Validation</h3>
 <p><br></p>
+<p><strong>Powershell Command:</strong></p>
 <pre><code>
-Kojima Roles
-├── Admin Roles          (Domain-joined member servers)
-└── Department Roles     (Domain-joined user endpoints)
-    ├── IT               (IT department role groups)
-    ├── Development      (Development department role groups)
-    └── Operations       (Operations department role groups)
-
-
-</code></pre>
-<p><br></p>
-<p>Department role groups will represent normal organizational membership.</p>
-<p>Examples include:</p>
-<ul>
-<li>GG-Role-IT-Staff</li>
-<li>GG-Role-Development-Staff</li>
-<li>GG-Role-Operations-Staff</li>
-</ul>
-<p>Administrative role groups will represent elevated responsibilities.</p>
-<p>Examples include:</p>
-<ul>
-<li>GG-Role-IT-AD-Administrator</li>
-<li>GG-Role-IT-System-Administrator</li>
-<li>GG-Role-IT-Helpdesk-Analyst</li>
-</ul>
-<p><br></p>
-<hr>
-<p><br></p>
-<h3 id="resource-ous">Resource OUs</h3>
-<p><br></p>
-<pre><code>
-Kojima Resources
-├── Domain Access (Delegated Active Directory permissions)
-├── Computer Access (Workstation, server, and management access)
-└── File Shares (NTFS and share-permission groups)
+Get-ADUser -Filter {
+    SamAccountName -eq "hal.emmerich" -or
+    SamAccountName -like "hemmerich-*"
+} -Properties Description |
+Select-Object `
+    Name,
+    SamAccountName,
+    Description,
+    @{Name="OU"; Expression={
+        if ($_.DistinguishedName -match ',OU=([^,]+)') {
+            $Matches[1]
+        }
+    }} |
+Sort-Object SamAccountName |
+Format-Table -AutoSize -Wrap
 
 </code></pre>
 <p><br></p>
-<p>Examples include:</p>
-<ul>
-<li>DL-AD-Password-Reset</li>
-<li>DL-AD-Workstation-Onboarding</li>
-<li>DL-All-Workstations-LocalAdmins</li>
-<li>DL-FS01-Operations-Modify</li>
-</ul>
-<p><br></p>
-<hr>
+<p><strong>Powershell Command:</strong></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/iam/account-powershell.png" data-desc-position="bottom"><img alt="Hal Emmerich - Powershell Validation" src="../../../assets/images/iam/account-powershell.png" style="width:60%; display:block; margin:0 ; border-radius:8px;"></a></p>
 <p><br></p><p></p>
     </article>
 </section>
