@@ -15,8 +15,11 @@ nav:
       - Domain Controller Setup: sections/active-directory/dc-setup.md
 #      - Forest Configuration: sections/active-directory/ou-design.md
   - 👥 Identity and Access Management:
-      - OU Design: sections/iam/iam-ou-design.md
-      - Account Creation: sections/iam/iam-user-accounts.md
+      - OU Design: sections/iam/1-iam-ou-design.md
+      - Account Creation: sections/iam/2-iam-user-accounts.md
+      - Domain Administrator: sections/iam/3-iam-domain-admin.md
+#      - Workstation Administrator: sections/iam/4-iam-workstation-admin.md
+#      - Server Administrator: sections/iam/5-iam-server-admin.md
 #  - 💻 Workstations:
 #      - Workstation Roles: sections/workstations/workstation-roles.md
 #      - Workstation GPOs: sections/workstations/workstation-gpos.md
