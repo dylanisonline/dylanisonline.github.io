@@ -16,7 +16,7 @@ nav:
 #      - Forest Configuration: sections/active-directory/ou-design.md
   - 👥 Identity and Access Management:
       - OU Design: sections/iam/iam-ou-design.md
-#      - User and Admin Accounts: sections/iam/iam-user-accounts.md
+      - Account Creation: sections/iam/iam-user-accounts.md
 #  - 💻 Workstations:
 #      - Workstation Roles: sections/workstations/workstation-roles.md
 #      - Workstation GPOs: sections/workstations/workstation-gpos.md
