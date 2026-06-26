@@ -2,7 +2,7 @@
 
 <br>
 
-To begin the account-provisioning process, the lab will focus on a single user: Huey “Hal” Emmerich.
+To begin the account-provisioning process, the lab will focus on a single user: Hal Emmerich.
 
 
 ![Hal Emmerich - Powershell Validation](../../assets/images/iam/hall.jpg){ style="width:20%; display:block; margin:0 ; border-radius:8px;" }

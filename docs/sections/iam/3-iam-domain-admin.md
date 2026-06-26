@@ -259,9 +259,128 @@ Active Directory Users and Computers -> Right-Click `Kojima Users` -> Delegate C
 
 <br>
 
-### Group and OU management
+### Group / OU Management
+
+
+<br>
+
+**Creating Global Groups via PowerShell:**
+
+```
+
+$GroupPath = "OU=Admin Roles,OU=Kojima Roles,OU=Kojima,DC=kojima,DC=test"
+
+try {
+    New-ADGroup `
+        -Name "Kojima-GG-Group-Management" `
+        -SamAccountName "Kojima-GG-Groups-Management" `
+        -GroupCategory Security `
+        -GroupScope DomainLocal `
+        -Path $GroupPath `
+        -Description "Role Group - Managing Groups (Create, Delete, Modify)" `
+        -ErrorAction Stop
+
+    New-ADGroup `
+        -Name "Kojima-GG-OU-Management" `
+        -SamAccountName "Kojima-GG-OU-Management" `
+        -GroupCategory Security `
+        -GroupScope DomainLocal `
+        -Path $GroupPath `
+        -Description "Role Group - Managing OUs (Create, Delete, Modify)" `
+        -ErrorAction Stop
+
+    Write-Host "Domain-local permission groups created successfully." -ForegroundColor Green
+}
+catch {
+    Write-Host "Group creation failed." -ForegroundColor Red
+    Write-Host $_.Exception.Message -ForegroundColor Yellow
+}
+
+```
+
+
+<br>
+
+**Validation:**
+
+![Global Group creation verification - Powershell ISE](../../assets/images/iam/ps-create-groups-1.png){ style="width:60%; display:block; margin:0 ; border-radius:8px;" }
+
+<br>
+
+**Creating Domain Local groups via PowerShell:**
+
+
+```
+
+$GroupPath = "OU=Domain Access,OU=Kojima Resources,OU=Kojima,DC=kojima,DC=test"
+
+try {
+    New-ADGroup `
+        -Name "Kojima-DL-Groups-Manage" `
+        -SamAccountName "Kojima-DL-Groups-Manage" `
+        -GroupCategory Security `
+        -GroupScope DomainLocal `
+        -Path $GroupPath `
+        -Description "DL Grpi[]" `
+        -ErrorAction Stop
+
+    New-ADGroup `
+        -Name "Kojima-DL-OU-Manage" `
+        -SamAccountName "Kojima-DL-OUs-Manage" `
+        -GroupCategory Security `
+        -GroupScope DomainLocal `
+        -Path $GroupPath `
+        -Description "Permission group for managing computers in the Kojima Computers OU" `
+        -ErrorAction Stop
+
+    Write-Host "Domain-local permission groups created successfully." -ForegroundColor Green
+}
+catch {
+    Write-Host "Group creation failed." -ForegroundColor Red
+    Write-Host $_.Exception.Message -ForegroundColor Yellow
+}
+
+
+```
+
+<br>
+
+**Validation:**
+
+![Global Group creation verification - Powershell ISE](../../assets/images/iam/ps-groups-2.png){ style="width:60%; display:block; margin:0 ; border-radius:8px;" }
+
+<br>
+
+
+**Delegating Access**
+
+![Global Group creation verification - Powershell ISE](../../assets/images/iam/ad-group-delegate.png){ style="width:60%; display:block; margin:0 ; border-radius:8px;" }
+
+![Global Group creation verification - Powershell ISE](../../assets/images/iam/ad-group-delegate-2.png){ style="width:60%; display:block; margin:0 ; border-radius:8px;" }
 
 <br>
 
 ---
 
+<br>
+
+### GPO Manangement
+
+<br>
+
+
+**Delegating GPO Create via GPMC:**
+
+![Global Group creation verification - Powershell ISE](../../assets/images/iam/gpmc-delegate.png){ style="width:60%; display:block; margin:0 ; border-radius:8px;" }
+
+<br>
+
+**Delegating GPO linking via GPMC:**
+
+![Global Group creation verification - Powershell ISE](../../assets/images/iam/gpmc-delegate-2.png){ style="width:60%; display:block; margin:0 ; border-radius:8px;" }
+
+<br>
+
+---
+
+<br>
