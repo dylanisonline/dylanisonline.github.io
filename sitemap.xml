@@ -2,78 +2,82 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://dylanisonline.github.io/</loc>
-         <lastmod>2026-06-26</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://dylanisonline.github.io/about/</loc>
-         <lastmod>2026-06-26</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
-         <loc>https://dylanisonline.github.io/sections/active-directory/dc-setup/</loc>
-         <lastmod>2026-06-26</lastmod>
+         <loc>https://dylanisonline.github.io/sections/1-networking/1-overview/</loc>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
-         <loc>https://dylanisonline.github.io/sections/active-directory/join-workstations/</loc>
-         <lastmod>2026-06-26</lastmod>
+         <loc>https://dylanisonline.github.io/sections/1-networking/2-openwrt-vm/</loc>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
-         <loc>https://dylanisonline.github.io/sections/active-directory/ou-design/</loc>
-         <lastmod>2026-06-26</lastmod>
+         <loc>https://dylanisonline.github.io/sections/1-networking/3-openwrt-config/</loc>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
-         <loc>https://dylanisonline.github.io/sections/active-directory/overview/</loc>
-         <lastmod>2026-06-26</lastmod>
+         <loc>https://dylanisonline.github.io/sections/1-networking/4-openwrt-gui/</loc>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
-         <loc>https://dylanisonline.github.io/sections/file-server/file-server/</loc>
-         <lastmod>2026-06-26</lastmod>
+         <loc>https://dylanisonline.github.io/sections/2-active-directory/1-dc-setup/</loc>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
-         <loc>https://dylanisonline.github.io/sections/iam/1-iam-ou-design/</loc>
-         <lastmod>2026-06-26</lastmod>
+         <loc>https://dylanisonline.github.io/sections/3-iam/1-iam-ou-design/</loc>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
-         <loc>https://dylanisonline.github.io/sections/iam/2-iam-user-accounts/</loc>
-         <lastmod>2026-06-26</lastmod>
+         <loc>https://dylanisonline.github.io/sections/3-iam/2-iam-admin-model/</loc>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
-         <loc>https://dylanisonline.github.io/sections/iam/3-iam-domain-admin/</loc>
-         <lastmod>2026-06-26</lastmod>
+         <loc>https://dylanisonline.github.io/sections/3-iam/3-iam-user-accounts/</loc>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
-         <loc>https://dylanisonline.github.io/sections/iam/4-iam-workstation-admin/</loc>
-         <lastmod>2026-06-26</lastmod>
+         <loc>https://dylanisonline.github.io/sections/3-iam/4-iam-taskgroups/</loc>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
-         <loc>https://dylanisonline.github.io/sections/iam/5-iam-server-admin/</loc>
-         <lastmod>2026-06-26</lastmod>
+         <loc>https://dylanisonline.github.io/sections/3-iam/5-iam-rolesgroups/</loc>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
-         <loc>https://dylanisonline.github.io/sections/networking/openwrt-config/</loc>
-         <lastmod>2026-06-26</lastmod>
+         <loc>https://dylanisonline.github.io/sections/3-iam/6-iam-domain-admin/</loc>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
-         <loc>https://dylanisonline.github.io/sections/networking/openwrt-gui/</loc>
-         <lastmod>2026-06-26</lastmod>
+         <loc>https://dylanisonline.github.io/sections/4-file-server/1-server-deployment/</loc>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
-         <loc>https://dylanisonline.github.io/sections/networking/openwrt-vm/</loc>
-         <lastmod>2026-06-26</lastmod>
+         <loc>https://dylanisonline.github.io/sections/4-file-server/2-fs-role/</loc>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
-         <loc>https://dylanisonline.github.io/sections/networking/overview/</loc>
-         <lastmod>2026-06-26</lastmod>
+         <loc>https://dylanisonline.github.io/sections/4-file-server/3-create-shares/</loc>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
-         <loc>https://dylanisonline.github.io/sections/workstations/workstation-gpos/</loc>
-         <lastmod>2026-06-26</lastmod>
+         <loc>https://dylanisonline.github.io/sections/4-file-server/4-fs-groups/</loc>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
-         <loc>https://dylanisonline.github.io/sections/workstations/workstation-onboarding/</loc>
-         <lastmod>2026-06-26</lastmod>
+         <loc>https://dylanisonline.github.io/sections/5-workstations/workstation-gpos/</loc>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
-         <loc>https://dylanisonline.github.io/sections/workstations/workstation-roles/</loc>
-         <lastmod>2026-06-26</lastmod>
+         <loc>https://dylanisonline.github.io/sections/5-workstations/workstation-onboarding/</loc>
+         <lastmod>2026-06-29</lastmod>
+    </url>
+    <url>
+         <loc>https://dylanisonline.github.io/sections/5-workstations/workstation-roles/</loc>
+         <lastmod>2026-06-29</lastmod>
     </url>
 </urlset>
